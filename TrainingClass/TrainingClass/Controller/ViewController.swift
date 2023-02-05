@@ -83,7 +83,7 @@ class ViewController: UIViewController {
                        animations: { [weak self] in
                            self?.errorLbl.alpha = 1
                        }) { [weak self] _ in
-            self?.errorLbl.alpha = 1
+            self?.errorLbl.alpha = 0
         }
     }
     
