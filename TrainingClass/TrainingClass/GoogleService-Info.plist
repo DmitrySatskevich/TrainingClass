@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>871106719734-8hh8nmac763k76h1qim8351jhc5qkl00.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.871106719734-8hh8nmac763k76h1qim8351jhc5qkl00</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBeKVIK3GeYz7JKJVwsRB3jgw84F_rl4eA</string>
+	<key>GCM_SENDER_ID</key>
+	<string>871106719734</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.sattdima34-gmail.TrainingClass</string>
+	<key>PROJECT_ID</key>
+	<string>treningclass-c590f</string>
+	<key>STORAGE_BUCKET</key>
+	<string>treningclass-c590f.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:871106719734:ios:b95f060f651bc7640261d7</string>
+	<key>DATABASE_URL</key>
+	<string>https://treningclass-c590f-default-rtdb.europe-west1.firebasedatabase.app</string>
+</dict>
+</plist>
