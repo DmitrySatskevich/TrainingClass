@@ -19,14 +19,14 @@ class HomepageVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func exitAction(_ sender: UIBarButtonItem) {
-        do {
-            try Auth.auth().signOut()
-            dismiss(animated: true, completion: nil)
-        } catch {
-            print(error.localizedDescription)
-        }
-    }
+//    @IBAction func exitAction(_ sender: UIBarButtonItem) {
+//        do {
+//            try Auth.auth().signOut()
+//            dismiss(animated: true, completion: nil)
+//        } catch {
+//            print(error.localizedDescription)
+//        }
+//    }
     
     
 
