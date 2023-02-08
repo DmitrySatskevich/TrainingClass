@@ -68,9 +68,9 @@ class ViewController: UIViewController {
     @IBAction func registerAction() {
         // проверяем все поля
         guard let email = emailTF.text,
-                let password = passwordTF.text,
-                email != "",
-                password != ""
+              let password = passwordTF.text,
+              email != "",
+              password != ""
         else {
             displayErrorLabel(withText: "Введите E-mail и Пароль")
             return
