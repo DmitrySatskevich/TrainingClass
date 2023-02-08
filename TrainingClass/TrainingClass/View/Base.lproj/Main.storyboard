@@ -32,7 +32,7 @@
                                         <color key="textColor" red="0.94328004119999997" green="0.87397480819999995" blue="0.51539266809999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IX4-e3-dyD">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IX4-e3-dyD">
                                         <rect key="frame" x="0.0" y="98.333333333333314" width="343" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
@@ -40,7 +40,7 @@
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="ZuV-gx-iO1"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dGE-Rh-M9l">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dGE-Rh-M9l">
                                         <rect key="frame" x="0.0" y="156.33333333333331" width="343" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
@@ -133,16 +133,165 @@ Class</string>
                     <view key="view" contentMode="scaleToFill" id="EB8-oi-FEI">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qJO-Nn-G4x">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="8cp-9K-GLb">
+                                        <rect key="frame" x="0.0" y="-103" width="393" height="1300.6666666666667"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vbW-Ci-dSU">
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="512.66666666666663"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ChooseYourProgram" translatesAutoresizingMaskIntoConstraints="NO" id="RPR-BO-o9Y">
+                                                        <rect key="frame" x="0.0" y="0.0" width="393" height="250"/>
+                                                        <rect key="contentStretch" x="0.0" y="0.050000000000000003" width="1" height="1"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="250" id="tVh-KX-70G"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ВОЗВРАЩЕНИЕ" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EDu-zy-Aga">
+                                                        <rect key="frame" x="0.0" y="250.00000000000003" width="393" height="31.333333333333343"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ПОСЛЕ ПЕРЕРЫВА" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QEh-KT-oJ9">
+                                                        <rect key="frame" x="0.0" y="281.33333333333337" width="393" height="31.333333333333314"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                                        <color key="textColor" red="0.69019609689999994" green="0.53725492949999998" blue="0.1843137443" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="oneMonth" translatesAutoresizingMaskIntoConstraints="NO" id="WVd-eu-WpU">
+                                                        <rect key="frame" x="0.0" y="312.66666666666663" width="393" height="200"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="200" id="sI3-yY-tLB"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="sb4-eF-vyA">
+                                                <rect key="frame" x="0.0" y="512.66666666666674" width="393" height="262.66666666666674"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ПРОГРАММА" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K22-Tf-rA0">
+                                                        <rect key="frame" x="0.0" y="0.0" width="393" height="31.333333333333332"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;ТЯНИ-ТОЛКАЙ-НОГИ&quot;" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EuN-7m-Vv7">
+                                                        <rect key="frame" x="0.0" y="31.333333333333314" width="393" height="31.333333333333329"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                                        <color key="textColor" red="0.69019609689999994" green="0.53725492949999998" blue="0.1843137443" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="twoMonths" translatesAutoresizingMaskIntoConstraints="NO" id="k1i-K2-Nlh">
+                                                        <rect key="frame" x="0.0" y="62.666666666666629" width="393" height="200"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="200" id="thR-nL-aE0"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="YDm-a1-Jc0">
+                                                <rect key="frame" x="0.0" y="775.33333333333337" width="393" height="262.66666666666663"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ПРОГРАММА" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aw8-8P-fr9">
+                                                        <rect key="frame" x="0.0" y="0.0" width="393" height="31.333333333333332"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="УДИРАЕМ ЛИШНИЙ ВЕС" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tNs-1W-gUJ">
+                                                        <rect key="frame" x="0.0" y="31.333333333333258" width="393" height="31.333333333333329"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                                        <color key="textColor" red="0.69019609689999994" green="0.53725492949999998" blue="0.1843137443" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="threeMonths" translatesAutoresizingMaskIntoConstraints="NO" id="Eyz-2k-D54">
+                                                        <rect key="frame" x="0.0" y="62.666666666666629" width="393" height="200"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="200" id="xEd-6o-cci"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="SFb-qM-Clw">
+                                                <rect key="frame" x="0.0" y="1038" width="393" height="262.66666666666674"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="НАБОР" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I4W-yb-gjI">
+                                                        <rect key="frame" x="0.0" y="0.0" width="393" height="31.333333333333332"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="МЫШЕЧНОЙ МАССЫ" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H0G-J2-jfp">
+                                                        <rect key="frame" x="0.0" y="31.333333333333371" width="393" height="31.333333333333329"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                                        <color key="textColor" red="0.69019609689999994" green="0.53725492949999998" blue="0.1843137443" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fourMonths" translatesAutoresizingMaskIntoConstraints="NO" id="SGs-8j-SQ3">
+                                                        <rect key="frame" x="0.0" y="62.666666666666629" width="393" height="200"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="200" id="Dbf-ej-YRk"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="8cp-9K-GLb" firstAttribute="bottom" secondItem="ZXc-5o-btC" secondAttribute="bottom" id="K72-nA-wWW"/>
+                                    <constraint firstItem="8cp-9K-GLb" firstAttribute="width" secondItem="Xwd-6C-hka" secondAttribute="width" id="Yi1-LC-voS"/>
+                                    <constraint firstItem="ZXc-5o-btC" firstAttribute="top" secondItem="8cp-9K-GLb" secondAttribute="top" constant="103" id="lGN-HK-lII"/>
+                                    <constraint firstItem="8cp-9K-GLb" firstAttribute="trailing" secondItem="ZXc-5o-btC" secondAttribute="trailing" id="qSr-fI-K3a"/>
+                                    <constraint firstItem="8cp-9K-GLb" firstAttribute="leading" secondItem="ZXc-5o-btC" secondAttribute="leading" id="qwl-dk-xMc"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="ZXc-5o-btC"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="Xwd-6C-hka"/>
+                            </scrollView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="8rw-Bu-cRh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Главная" id="ggO-iZ-q1r">
                         <imageReference key="image" image="house" catalog="system" symbolScale="medium"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="returningAfterTheBreak" destination="WVd-eu-WpU" id="7ke-JX-9Zq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fu0-Kw-pQJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1849.6183206106869" y="736.61971830985919"/>
+        </scene>
+        <!--Training ListVC-->
+        <scene sceneID="PpW-DI-ory">
+            <objects>
+                <viewController storyboardIdentifier="TrainingList" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vMp-3o-XyR" customClass="TrainingListVC" customModule="TrainingClass" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OVf-tS-RYl">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="bzZ-Gl-GGS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="sWY-fC-7zV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S0x-zd-IP5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1850" y="1427"/>
         </scene>
         <!--Рекомендации-->
         <scene sceneID="TtF-NQ-FNX">
@@ -198,7 +347,7 @@ Class</string>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KyA-Wp-VTk" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="FGX-cj-i01"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AYr-9I-jzb">
+                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" id="AYr-9I-jzb">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -218,6 +367,7 @@ Class</string>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="q4d-DF-fow"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RM9-3H-OPg">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.1215686351" green="0.1215686351" blue="0.1411764771" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="barTintColor" systemColor="labelColor"/>
@@ -236,10 +386,15 @@ Class</string>
         </scene>
     </scenes>
     <resources>
+        <image name="ChooseYourProgram" width="707" height="471.33334350585938"/>
         <image name="doc.plaintext" catalog="system" width="115" height="128"/>
         <image name="fork.knife.circle" catalog="system" width="128" height="123"/>
+        <image name="fourMonths" width="682.66668701171875" height="344.66665649414062"/>
         <image name="house" catalog="system" width="128" height="104"/>
+        <image name="oneMonth" width="682.66668701171875" height="354.66665649414062"/>
         <image name="rectangle.and.pencil.and.ellipsis" catalog="system" width="128" height="80"/>
+        <image name="threeMonths" width="682.66668701171875" height="376"/>
+        <image name="twoMonths" width="682.66668701171875" height="379.33334350585938"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

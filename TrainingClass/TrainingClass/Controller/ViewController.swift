@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         emailTF.delegate = self
         passwordTF.delegate = self
         ref = Database.database().reference(withPath: "users")
