@@ -21,16 +21,17 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         emailTF.delegate = self
         passwordTF.delegate = self
         ref = Database.database().reference(withPath: "users")
+        
         // если пользователь уже есть, производим переход в личный кабинет
         authStateDidChangeListenerHandle = Auth.auth().addStateDidChangeListener { [weak self] _, user in
             guard let _ = user else {
                 return
             }
-            self?.performSegue(withIdentifier: "tasksSegue", sender: nil)
+            self?.performSegue(withIdentifier: "homepage", sender: nil)
         }
         
         NotificationCenter.default.addObserver(self, selector: #selector(kbDidShow), name: UIWindow.keyboardWillShowNotification, object: nil)
@@ -45,18 +46,15 @@ class ViewController: UIViewController {
     }
 
     @IBAction func enterAction() {
-        
-    }
-        
-    @IBAction func registerAction() {
         guard let email = emailTF.text,
               let password = passwordTF.text,
               email != "",
-              password != "" else {
-            displayErrorLabel(withText: "Info is incorrect")
+              password != ""
+        else {
+            displayErrorLabel(withText: "Введите E-mail и Пароль")
             return
         }
-        // регистрация
+        // Вход
         Auth.auth().signIn(withEmail: email, password: password) { [weak self] user, error in
             if let error {
                 self?.displayErrorLabel(withText: "Error occured: \(error.localizedDescription)")
@@ -64,7 +62,30 @@ class ViewController: UIViewController {
                 // если замыкание отрабатывает без ошибок, перейти на новый экран
                 self?.performSegue(withIdentifier: "homepage", sender: nil)
             }
-            
+        }
+    }
+        
+    @IBAction func registerAction() {
+        // проверяем все поля
+        guard let email = emailTF.text,
+              let password = passwordTF.text,
+              email != "",
+              password != ""
+        else {
+            displayErrorLabel(withText: "Введите E-mail и Пароль")
+            return
+        }
+        // регистрация
+        Auth.auth().createUser(withEmail: email, password: password) { [weak self] user, error in
+            if let error {
+                self?.displayErrorLabel(withText: "Error occured: \(error.localizedDescription)")
+            } else {
+                guard let user = user else {
+                    return
+                }
+                let userRef = self?.ref.child(user.user.uid)
+                userRef?.setValue(["email": user.user.email])
+            }
         }
     }
         
@@ -83,7 +104,7 @@ class ViewController: UIViewController {
                        animations: { [weak self] in
                            self?.errorLbl.alpha = 1
                        }) { [weak self] _ in
-            self?.errorLbl.alpha = 1
+            self?.errorLbl.alpha = 0
         }
     }
     

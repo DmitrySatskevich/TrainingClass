@@ -6,26 +6,43 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseStorage
 
 class HomepageVC: UIViewController {
     
     private var user: User!
-
+    
+    @IBOutlet weak var returningAfterTheBreak: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    let tapGestureRecognizer = UITapGestureRecognizer(target: self,
+                                                      action: #selector(imageTapped(tapGestureRecognizer:)))
+        returningAfterTheBreak.isUserInteractionEnabled = true
+        returningAfterTheBreak.addGestureRecognizer(tapGestureRecognizer)
+    }
 
-        // Do any additional setup after loading the view.
+    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer) {
+        _ = tapGestureRecognizer.view as! UIImageView
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let TrainingListVC = storyboard.instantiateViewController(withIdentifier:
+            "TrainingList") as? TrainingListVC {
+            navigationController?.pushViewController(TrainingListVC, animated: true)
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+//    @IBAction func button() {
+//        do {
+//            try Auth.auth().signOut()
+//            dismiss(animated: true, completion: nil)
+//        } catch {
+//            print(error.localizedDescription)
+//        }
+//    }
 
 }
+
+
