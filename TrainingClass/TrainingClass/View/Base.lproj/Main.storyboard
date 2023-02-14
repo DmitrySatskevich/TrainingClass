@@ -270,7 +270,10 @@ Class</string>
                         <imageReference key="image" image="house" catalog="system" symbolScale="medium"/>
                     </tabBarItem>
                     <connections>
-                        <outlet property="returningAfterTheBreak" destination="WVd-eu-WpU" id="7ke-JX-9Zq"/>
+                        <outlet property="fourMonthsImageView" destination="SGs-8j-SQ3" id="cJg-Ms-HHN"/>
+                        <outlet property="oneMonthImageView" destination="WVd-eu-WpU" id="xL8-sS-Bnw"/>
+                        <outlet property="threeMonthsImageView" destination="Eyz-2k-D54" id="dWU-NA-alB"/>
+                        <outlet property="twoMonthsImageView" destination="k1i-K2-Nlh" id="HZE-Pp-FsS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fu0-Kw-pQJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

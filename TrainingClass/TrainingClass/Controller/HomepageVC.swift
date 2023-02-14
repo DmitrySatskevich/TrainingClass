@@ -13,17 +13,28 @@ class HomepageVC: UIViewController {
     
     private var user: User!
     
-    @IBOutlet weak var returningAfterTheBreak: UIImageView!
+    @IBOutlet weak var oneMonthImageView: UIImageView!
+    @IBOutlet weak var twoMonthsImageView: UIImageView!
+    @IBOutlet weak var threeMonthsImageView: UIImageView!
+    @IBOutlet weak var fourMonthsImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    let tapGestureRecognizer = UITapGestureRecognizer(target: self,
-                                                      action: #selector(imageTapped(tapGestureRecognizer:)))
-        returningAfterTheBreak.isUserInteractionEnabled = true
-        returningAfterTheBreak.addGestureRecognizer(tapGestureRecognizer)
+        tapGestureRecognizerFunc(ImageView: oneMonthImageView)
+        tapGestureRecognizerFunc(ImageView: twoMonthsImageView)
+        tapGestureRecognizerFunc(ImageView: threeMonthsImageView)
+        tapGestureRecognizerFunc(ImageView: fourMonthsImageView)
     }
-
+    
+    private func tapGestureRecognizerFunc(ImageView: UIImageView) {
+        let tapGestureRecognizer = UITapGestureRecognizer(
+            target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+        
+        ImageView.addGestureRecognizer(tapGestureRecognizer)
+        ImageView.isUserInteractionEnabled = true
+    }
+    
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer) {
         _ = tapGestureRecognizer.view as! UIImageView
         
