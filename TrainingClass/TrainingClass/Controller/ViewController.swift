@@ -31,7 +31,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
             guard let _ = user else {
                 return
             }
-            self?.performSegue(withIdentifier: "homepage", sender: nil)
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            if let HomepageVC = storyboard.instantiateViewController(withIdentifier:
+                "HomepageVC") as? TrainingListVC {
+                self?.navigationController?.pushViewController(HomepageVC, animated: true)
+            }
+//            self?.performSegue(withIdentifier: "homepage", sender: nil)
         }
         
         NotificationCenter.default.addObserver(self, selector: #selector(kbDidShow), name:
@@ -62,7 +68,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 self?.displayErrorLabel(withText: "Error occured: \(error.localizedDescription)")
             } else if let _ = user {
                 // если замыкание отрабатывает без ошибок, перейти на новый экран
-                self?.performSegue(withIdentifier: "homepage", sender: nil)
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                if let HomepageVC = storyboard.instantiateViewController(withIdentifier:
+                    "HomepageVC") as? TrainingListVC {
+                    self?.navigationController?.pushViewController(HomepageVC, animated: true)
+                }
+//                self?.performSegue(withIdentifier: "homepage", sender: nil)
             }
         }
     }
@@ -126,7 +137,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
 // MARK: - ViewController + UITextFieldDelegate
 
-extension ViewController: UITextFieldDelegate {
+extension ViewController {
 //    Скрываем клавиатуру, по нажатию "return".
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)

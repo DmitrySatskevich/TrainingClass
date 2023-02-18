@@ -48,7 +48,7 @@ class HomepageVC: UIViewController {
         
         _ = tapGestureRecognizer.view as? UIImageView
         
-        let storyboard = UIStoryboard(name: "OneMonthProgram", bundle: nil)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let TrainingListVC = storyboard.instantiateViewController(withIdentifier:
             "TrainingList") as? TrainingListVC {
             navigationController?.pushViewController(TrainingListVC, animated: true)
