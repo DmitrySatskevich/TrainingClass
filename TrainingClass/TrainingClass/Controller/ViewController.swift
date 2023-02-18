@@ -9,7 +9,7 @@ import UIKit
 import FirebaseDatabase
 import FirebaseAuth
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     
     var ref: DatabaseReference!
     
@@ -31,11 +31,19 @@ class ViewController: UIViewController {
             guard let _ = user else {
                 return
             }
-            self?.performSegue(withIdentifier: "homepage", sender: nil)
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            if let HomepageVC = storyboard.instantiateViewController(withIdentifier:
+                "HomepageVC") as? TrainingListVC {
+                self?.navigationController?.pushViewController(HomepageVC, animated: true)
+            }
+//            self?.performSegue(withIdentifier: "homepage", sender: nil)
         }
         
-        NotificationCenter.default.addObserver(self, selector: #selector(kbDidShow), name: UIWindow.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(kbDidHide), name: UIWindow.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(kbDidShow), name:
+                                                UIWindow.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(kbDidHide), name:
+                                                UIWindow.keyboardWillHideNotification, object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -60,7 +68,12 @@ class ViewController: UIViewController {
                 self?.displayErrorLabel(withText: "Error occured: \(error.localizedDescription)")
             } else if let _ = user {
                 // если замыкание отрабатывает без ошибок, перейти на новый экран
-                self?.performSegue(withIdentifier: "homepage", sender: nil)
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                if let HomepageVC = storyboard.instantiateViewController(withIdentifier:
+                    "HomepageVC") as? TrainingListVC {
+                    self?.navigationController?.pushViewController(HomepageVC, animated: true)
+                }
+//                self?.performSegue(withIdentifier: "homepage", sender: nil)
             }
         }
     }
@@ -124,7 +137,7 @@ class ViewController: UIViewController {
 
 // MARK: - ViewController + UITextFieldDelegate
 
-extension ViewController: UITextFieldDelegate {
+extension ViewController {
 //    Скрываем клавиатуру, по нажатию "return".
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
