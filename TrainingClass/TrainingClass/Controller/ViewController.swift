@@ -9,7 +9,7 @@ import UIKit
 import FirebaseDatabase
 import FirebaseAuth
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     
     var ref: DatabaseReference!
     
@@ -34,8 +34,10 @@ class ViewController: UIViewController {
             self?.performSegue(withIdentifier: "homepage", sender: nil)
         }
         
-        NotificationCenter.default.addObserver(self, selector: #selector(kbDidShow), name: UIWindow.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(kbDidHide), name: UIWindow.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(kbDidShow), name:
+                                                UIWindow.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(kbDidHide), name:
+                                                UIWindow.keyboardWillHideNotification, object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
