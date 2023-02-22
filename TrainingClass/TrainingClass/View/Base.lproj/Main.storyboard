@@ -244,7 +244,7 @@ Class</string>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="0.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yt7-hk-pt4">
                                                 <rect key="frame" x="223.33333333333334" y="0.0" width="119.66666666666666" height="25.333333333333332"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="21"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                                 <metadata>
@@ -270,7 +270,7 @@ Class</string>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vok-3j-1TP">
                                                 <rect key="frame" x="0.0" y="0.0" width="283" height="34.333333333333336"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Похудение">
+                                                <buttonConfiguration key="configuration" style="plain" title="Похудение   ☞">
                                                     <color key="baseForegroundColor" red="0.77254903320000001" green="0.64313727620000005" blue="0.21960783" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </buttonConfiguration>
                                                 <connections>
@@ -285,6 +285,9 @@ Class</string>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="A6S-PY-O6x" id="zwS-0U-Dop"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -294,7 +297,7 @@ Class</string>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IIt-u6-mVw">
                                                 <rect key="frame" x="0.0" y="0.0" width="283" height="34.333333333333336"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Поддержание">
+                                                <buttonConfiguration key="configuration" style="plain" title="Поддержание   ☞">
                                                     <color key="baseForegroundColor" red="0.77254903320000001" green="0.64313727620000005" blue="0.21960783" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </buttonConfiguration>
                                                 <connections>
@@ -309,6 +312,9 @@ Class</string>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="A6S-PY-O6x" id="poL-tH-S1O"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -318,7 +324,7 @@ Class</string>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9YV-mF-mNk">
                                                 <rect key="frame" x="0.0" y="0.0" width="283" height="34.333333333333336"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Набор">
+                                                <buttonConfiguration key="configuration" style="plain" title="Набор    ☞">
                                                     <color key="baseForegroundColor" red="0.77254903320000001" green="0.64313727620000005" blue="0.21960783" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </buttonConfiguration>
                                                 <connections>
@@ -333,6 +339,9 @@ Class</string>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="A6S-PY-O6x" id="ypo-gK-2Pg"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
