@@ -37,7 +37,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 "HomepageVC") as? TrainingListVC {
                 self?.navigationController?.pushViewController(HomepageVC, animated: true)
             }
-//            self?.performSegue(withIdentifier: "homepage", sender: nil)
         }
         
         NotificationCenter.default.addObserver(self, selector: #selector(kbDidShow), name:
@@ -73,7 +72,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
                     "HomepageVC") as? TrainingListVC {
                     self?.navigationController?.pushViewController(HomepageVC, animated: true)
                 }
-//                self?.performSegue(withIdentifier: "homepage", sender: nil)
             }
         }
     }
