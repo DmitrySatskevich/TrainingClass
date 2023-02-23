@@ -25,6 +25,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         emailTF.delegate = self
         passwordTF.delegate = self
         ref = Database.database().reference(withPath: "users")
+        notificationCenter()
         
         // если пользователь уже есть, производим переход в личный кабинет
         authStateDidChangeListenerHandle = Auth.auth().addStateDidChangeListener { [weak self] _, user in
@@ -33,16 +34,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
             }
             
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            if let HomepageVC = storyboard.instantiateViewController(withIdentifier:
-                "HomepageVC") as? TrainingListVC {
+            if let HomepageVC = storyboard.instantiateViewController(withIdentifier: "HomepageVC") as? HomepageVC {
                 self?.navigationController?.pushViewController(HomepageVC, animated: true)
             }
         }
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(kbDidShow), name:
-                                                UIWindow.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(kbDidHide), name:
-                                                UIWindow.keyboardWillHideNotification, object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -66,10 +61,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
             if let error {
                 self?.displayErrorLabel(withText: "Error occured: \(error.localizedDescription)")
             } else if let _ = user {
+                
                 // если замыкание отрабатывает без ошибок, перейти на новый экран
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                if let HomepageVC = storyboard.instantiateViewController(withIdentifier:
-                    "HomepageVC") as? TrainingListVC {
+                if let HomepageVC = storyboard.instantiateViewController(withIdentifier: "HomepageVC") as? HomepageVC {
                     self?.navigationController?.pushViewController(HomepageVC, animated: true)
                 }
             }
@@ -101,7 +96,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
         
     @IBAction func forgotYourPasswordAction() {
-        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let HomepageVC = storyboard.instantiateViewController(withIdentifier:
+            "HomepageVC") as? HomepageVC {
+            self.navigationController?.pushViewController(HomepageVC, animated: true)
+        }
     }
     
     // анимация появления Error
@@ -117,6 +116,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
                        }) { [weak self] _ in
             self?.errorLbl.alpha = 0
         }
+    }
+    
+    private func notificationCenter() {
+        NotificationCenter.default.addObserver(self, selector: #selector(kbDidShow), name:
+                                                UIWindow.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(kbDidHide), name:
+                                                UIWindow.keyboardWillHideNotification, object: nil)
     }
     
     //  Смещение экрана при появлении клавиатуры

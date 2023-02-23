@@ -22,9 +22,9 @@ class HomepageVC: UIViewController {
         super.viewDidLoad()
         
         tapGestureRecognizerFunc(ImageView: oneMonthImageView)
-        tapGestureRecognizerFunc(ImageView: twoMonthsImageView)
-        tapGestureRecognizerFunc(ImageView: threeMonthsImageView)
-        tapGestureRecognizerFunc(ImageView: fourMonthsImageView)
+//        tapGestureRecognizerFunc(ImageView: twoMonthsImageView)
+//        tapGestureRecognizerFunc(ImageView: threeMonthsImageView)
+//        tapGestureRecognizerFunc(ImageView: fourMonthsImageView)
         
         size()
     }
@@ -49,21 +49,20 @@ class HomepageVC: UIViewController {
         _ = tapGestureRecognizer.view as? UIImageView
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let TrainingListVC = storyboard.instantiateViewController(withIdentifier:
-            "TrainingList") as? TrainingListVC {
+        if let TrainingListVC = storyboard.instantiateViewController(withIdentifier: "TrainingList") as? TrainingListVC {
             navigationController?.pushViewController(TrainingListVC, animated: true)
         }
     }
     
     // выход из акаунта
-//    @IBAction func button() {
-//        do {
-//            try Auth.auth().signOut()
-//            dismiss(animated: true, completion: nil)
-//        } catch {
-//            print(error.localizedDescription)
-//        }
-//    }
+    @IBAction func button() {
+        do {
+            try Auth.auth().signOut()
+            dismiss(animated: true, completion: nil)
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
 }
 
 

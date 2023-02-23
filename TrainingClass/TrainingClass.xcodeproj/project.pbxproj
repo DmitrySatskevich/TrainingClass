@@ -62,8 +62,8 @@
 		F500D3A829A65EA400840EAD /* CalculatorVC */ = {
 			isa = PBXGroup;
 			children = (
-				F500D3A929A65ECD00840EAD /* CalculatorVC.swift */,
 				F528EE3529A69CDF00D88759 /* ModelCalculatorVC.swift */,
+				F500D3A929A65ECD00840EAD /* CalculatorVC.swift */,
 			);
 			path = CalculatorVC;
 			sourceTree = "<group>";
