@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TrainingClass" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="registrationScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="TrainingClass" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -138,7 +138,7 @@ Class</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bw1-l9-tXi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2613" y="737"/>
+            <point key="canvasLocation" x="3415" y="737"/>
         </scene>
         <!--Питание-->
         <scene sceneID="NM4-x9-Au1">
@@ -154,23 +154,239 @@ Class</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SYy-d9-Ms3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3410" y="737"/>
+            <point key="canvasLocation" x="4219" y="737"/>
         </scene>
-        <!--Заметки-->
+        <!--Калькулятор-->
         <scene sceneID="AW6-q1-FH8">
             <objects>
-                <viewController id="A6S-PY-O6x" sceneMemberID="viewController">
+                <viewController id="A6S-PY-O6x" customClass="CalculatorVC" customModule="TrainingClass" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oVu-2j-uRa">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="fMw-5o-S4k">
+                                <rect key="frame" x="25" y="127.99999999999999" width="343" height="233.66666666666663"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="КАЛЬКУЛЯТОР КАЛОРИЙ" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yel-Jj-DvI">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="31.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                        <color key="textColor" red="0.96078431610000004" green="0.74509805439999999" blue="0.25490197539999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pWR-V8-HP7">
+                                        <rect key="frame" x="0.0" y="58.333333333333343" width="343" height="23"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Суточная норма белка" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qco-qG-h0V">
+                                                <rect key="frame" x="0.0" y="0.0" width="200.66666666666666" height="23"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="0.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ttj-n1-7Sh">
+                                                <rect key="frame" x="200.66666666666663" y="0.0" width="142.33333333333337" height="23"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                                <metadata>
+                                                    <string key="libraryAssetSourceID">Xcode.InterfaceBuilderKit.CocoaTouchIntegration.ObjectLibraryAssetProvider:IBUILabel</string>
+                                                </metadata>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SOV-oj-P38">
+                                        <rect key="frame" x="0.0" y="108.33333333333334" width="343" height="23"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Суточная норма жиров" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qv8-EA-v07">
+                                                <rect key="frame" x="0.0" y="0.0" width="206.66666666666666" height="23"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="0.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D1S-hf-TDl">
+                                                <rect key="frame" x="206.66666666666663" y="0.0" width="136.33333333333337" height="23"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                                <metadata>
+                                                    <string key="libraryAssetSourceID">Xcode.InterfaceBuilderKit.CocoaTouchIntegration.ObjectLibraryAssetProvider:IBUILabel</string>
+                                                </metadata>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aPa-Xf-O0X">
+                                        <rect key="frame" x="0.0" y="158.33333333333331" width="343" height="23"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Суточная норма углеводов" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fjb-I8-coy">
+                                                <rect key="frame" x="0.0" y="0.0" width="240.33333333333334" height="23"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="0.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="22K-26-JLr">
+                                                <rect key="frame" x="240.33333333333329" y="0.0" width="102.66666666666666" height="23"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                                <metadata>
+                                                    <string key="libraryAssetSourceID">Xcode.InterfaceBuilderKit.CocoaTouchIntegration.ObjectLibraryAssetProvider:IBUILabel</string>
+                                                </metadata>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4yu-Cu-WZi">
+                                        <rect key="frame" x="0.0" y="208.33333333333331" width="343" height="25.333333333333343"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Суточная норма калорий" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YFb-zH-VGm">
+                                                <rect key="frame" x="0.0" y="0.0" width="223.33333333333334" height="25.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="0.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yt7-hk-pt4">
+                                                <rect key="frame" x="223.33333333333334" y="0.0" width="119.66666666666666" height="25.333333333333332"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="21"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                                <metadata>
+                                                    <string key="libraryAssetSourceID">Xcode.InterfaceBuilderKit.CocoaTouchIntegration.ObjectLibraryAssetProvider:IBUILabel</string>
+                                                </metadata>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="uPc-8F-NF7">
+                                <rect key="frame" x="85" y="401.66666666666669" width="283" height="171.33333333333331"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите свой вес" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZf-EF-CDw">
+                                        <rect key="frame" x="0.0" y="0.0" width="283" height="14.333333333333334"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" red="0.77254903320000001" green="0.64313727620000005" blue="0.21960783" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="75a-8M-GAB">
+                                        <rect key="frame" x="0.0" y="32.333333333333314" width="283" height="34.333333333333343"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vok-3j-1TP">
+                                                <rect key="frame" x="0.0" y="0.0" width="283" height="34.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Похудение   ☞">
+                                                    <color key="baseForegroundColor" red="0.77254903320000001" green="0.64313727620000005" blue="0.21960783" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="weightLossButton" destination="A6S-PY-O6x" eventType="touchUpInside" id="7NP-VD-de7"/>
+                                                </connections>
+                                            </button>
+                                            <textField hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ybP-0F-egU">
+                                                <rect key="frame" x="0.0" y="0.0" width="60" height="34.333333333333336"/>
+                                                <color key="backgroundColor" red="0.60150331440000004" green="0.60150331440000004" blue="0.60150331440000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="60" id="DEq-Nl-t5c"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="A6S-PY-O6x" id="zwS-0U-Dop"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AZV-JQ-Lsr">
+                                        <rect key="frame" x="0.0" y="84.666666666666629" width="283" height="34.333333333333343"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IIt-u6-mVw">
+                                                <rect key="frame" x="0.0" y="0.0" width="283" height="34.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Поддержание   ☞">
+                                                    <color key="baseForegroundColor" red="0.77254903320000001" green="0.64313727620000005" blue="0.21960783" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="weightMaintenanceButton" destination="A6S-PY-O6x" eventType="touchUpInside" id="sdo-1U-pyM"/>
+                                                </connections>
+                                            </button>
+                                            <textField hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="acC-wr-Hv3">
+                                                <rect key="frame" x="0.0" y="0.0" width="60" height="34.333333333333336"/>
+                                                <color key="backgroundColor" red="0.60150331440000004" green="0.60150331440000004" blue="0.60150331440000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="60" id="gXq-I9-wFS"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="A6S-PY-O6x" id="poL-tH-S1O"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f7y-V1-TLG">
+                                        <rect key="frame" x="0.0" y="136.99999999999994" width="283" height="34.333333333333343"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9YV-mF-mNk">
+                                                <rect key="frame" x="0.0" y="0.0" width="283" height="34.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Набор    ☞">
+                                                    <color key="baseForegroundColor" red="0.77254903320000001" green="0.64313727620000005" blue="0.21960783" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="massGainButton" destination="A6S-PY-O6x" eventType="touchUpInside" id="P5V-cO-bmt"/>
+                                                </connections>
+                                            </button>
+                                            <textField hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KWO-vQ-l5M">
+                                                <rect key="frame" x="0.0" y="0.0" width="60" height="34.333333333333336"/>
+                                                <color key="backgroundColor" red="0.60150331440000004" green="0.60150331440000004" blue="0.60150331440000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="60" id="v51-ud-zFg"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="A6S-PY-O6x" id="ypo-gK-2Pg"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RXb-Nj-Xn5">
+                                <rect key="frame" x="231.33333333333337" y="598" width="136.66666666666663" height="38"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Рассчитать">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
+                                    <color key="baseBackgroundColor" red="0.52549022440000004" green="0.65882354970000001" blue="0.90588235859999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="calculateButton" destination="A6S-PY-O6x" eventType="touchUpInside" id="bob-HO-9ed"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="HlU-UY-xsB"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="RXb-Nj-Xn5" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="HlU-UY-xsB" secondAttribute="leading" symbolic="YES" id="OsK-B8-wfg"/>
+                            <constraint firstItem="fMw-5o-S4k" firstAttribute="leading" secondItem="HlU-UY-xsB" secondAttribute="leading" constant="25" id="Q9q-RY-8Io"/>
+                            <constraint firstItem="RXb-Nj-Xn5" firstAttribute="top" secondItem="uPc-8F-NF7" secondAttribute="bottom" constant="25" id="VaF-kE-fLz"/>
+                            <constraint firstItem="HlU-UY-xsB" firstAttribute="trailing" secondItem="RXb-Nj-Xn5" secondAttribute="trailing" constant="25" id="XcB-o9-gx0"/>
+                            <constraint firstItem="uPc-8F-NF7" firstAttribute="leading" secondItem="HlU-UY-xsB" secondAttribute="leading" constant="85" id="am8-Yw-BNu"/>
+                            <constraint firstItem="fMw-5o-S4k" firstAttribute="top" secondItem="HlU-UY-xsB" secondAttribute="top" constant="25" id="ceI-wc-pKr"/>
+                            <constraint firstItem="HlU-UY-xsB" firstAttribute="trailing" secondItem="fMw-5o-S4k" secondAttribute="trailing" constant="25" id="kdm-fK-NlF"/>
+                            <constraint firstItem="uPc-8F-NF7" firstAttribute="top" secondItem="fMw-5o-S4k" secondAttribute="bottom" constant="40" id="lvm-aN-HGb"/>
+                            <constraint firstItem="HlU-UY-xsB" firstAttribute="trailing" secondItem="uPc-8F-NF7" secondAttribute="trailing" constant="25" id="zKa-sj-XBm"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Заметки" image="rectangle.and.pencil.and.ellipsis" catalog="system" id="XRd-Dd-dzM"/>
+                    <tabBarItem key="tabBarItem" title="Калькулятор" image="rectangle.and.pencil.and.ellipsis" catalog="system" id="XRd-Dd-dzM"/>
+                    <connections>
+                        <outlet property="carbohydrateRateLbl" destination="22K-26-JLr" id="xQ3-yT-eKN"/>
+                        <outlet property="fatRateLbl" destination="D1S-hf-TDl" id="SBY-ql-iYl"/>
+                        <outlet property="massGainTFOutlet" destination="KWO-vQ-l5M" id="sb9-Am-qVA"/>
+                        <outlet property="proteinRateLbl" destination="ttj-n1-7Sh" id="0kC-qR-WTm"/>
+                        <outlet property="totalCaloriesLbl" destination="yt7-hk-pt4" id="HG7-a7-1fZ"/>
+                        <outlet property="weightLossTFOutlet" destination="ybP-0F-egU" id="akV-zh-qkg"/>
+                        <outlet property="weightMaintenanceTFOutlet" destination="acC-wr-Hv3" id="kp2-gd-EX0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dwA-FN-FAo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4166" y="737"/>
+            <point key="canvasLocation" x="5024" y="737"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="fAX-JP-KCx">
@@ -278,7 +494,7 @@ Class</string>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="УДИРАЕМ ЛИШНИЙ ВЕС" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ch8-KJ-C9U">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="УБИРАЕМ ЛИШНИЙ ВЕС" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ch8-KJ-C9U">
                                                         <rect key="frame" x="0.0" y="31.333333333333258" width="393" height="31.333333333333329"/>
                                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
@@ -347,7 +563,7 @@ Class</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0G5-Hm-nms" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1850" y="737"/>
+            <point key="canvasLocation" x="2613" y="737"/>
         </scene>
         <!--Training ListVC-->
         <scene sceneID="TEQ-vY-gXf">
@@ -363,7 +579,7 @@ Class</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iww-Rh-J93" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1850" y="1425"/>
+            <point key="canvasLocation" x="2613" y="1434"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qnn-RJ-GDZ">
@@ -371,8 +587,8 @@ Class</string>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Pqn-v4-4DW" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="T0K-gK-xZF"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QoV-EV-zX4">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" id="QoV-EV-zX4">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -383,7 +599,7 @@ Class</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XUU-30-NzR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1850" y="-2"/>
+            <point key="canvasLocation" x="1839" y="-2"/>
         </scene>
     </scenes>
     <resources>
