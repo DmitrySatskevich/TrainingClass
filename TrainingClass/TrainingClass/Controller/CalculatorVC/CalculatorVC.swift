@@ -38,18 +38,17 @@ final class CalculatorVC: UIViewController {
     }
     
     @IBAction func calculateButton() {
-        guard let weightLoss = weightLossTFOutlet.text,
-              let weightMaintenance = weightMaintenanceTFOutlet.text,
-              let massGain = massGainTFOutlet.text
-        else { return }
+        let weightLoss: Int? = Int(weightLossTFOutlet.text!)
+        let weightMaintenance: Int? = Int(weightMaintenanceTFOutlet.text!)
+        let massGain: Int? = Int(massGainTFOutlet.text!)
         
         // нужно создать логику отображения КБЖУ
-        if weightLoss != "" {
-            totalCaloriesLbl.text = weightLoss
-        } else if weightMaintenance != "" {
-            totalCaloriesLbl.text = weightMaintenance
-        } else if massGain != "" {
-            totalCaloriesLbl.text = massGain
+        if weightLoss != nil {
+            totalCaloriesLbl.text = (weightLoss! * 25).description
+        } else if weightMaintenance != nil {
+            totalCaloriesLbl.text = (weightMaintenance! * 28).description
+        } else if massGain != nil {
+            totalCaloriesLbl.text = (massGain! * 32).description
         }
     }
     
