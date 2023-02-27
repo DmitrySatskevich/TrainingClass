@@ -45,20 +45,20 @@ final class CalculatorVC: UIViewController {
         
         // логика отображения КБЖУ
         if weightLoss != nil {
-            proteinRateLbl.text = String(format: "%.2f", (weightLoss! * 25 * 0.333 / 4))
-            fatRateLbl.text = String(format: "%.2f", (weightLoss! * 25 * 0.333 / 9))
-            carbohydrateRateLbl.text = String(format: "%.2f", (weightLoss! * 25 * 0.4 / 4))
-            totalCaloriesLbl.text = (weightLoss! * 25).description
+            proteinRateLbl.text = String(format: "%.2f", (weightLoss! * 25 * 0.333 / 4)) + " гр"
+            fatRateLbl.text = String(format: "%.2f", (weightLoss! * 25 * 0.333 / 9)) + " гр"
+            carbohydrateRateLbl.text = String(format: "%.2f", (weightLoss! * 25 * 0.4 / 4)) + " гр"
+            totalCaloriesLbl.text = String(format: "%.2f", (weightLoss! * 25))
         } else if weightMaintenance != nil {
-            proteinRateLbl.text = String(format: "%.2f", (weightMaintenance! * 28 * 0.333 / 4))
-            fatRateLbl.text = String(format: "%.2f", (weightMaintenance! * 28 * 0.333 / 9))
-            carbohydrateRateLbl.text = String(format: "%.2f", (weightMaintenance! * 28 * 0.4 / 4))
-            totalCaloriesLbl.text = (weightMaintenance! * 28).description
+            proteinRateLbl.text = String(format: "%.2f", (weightMaintenance! * 28 * 0.333 / 4)) + " гр"
+            fatRateLbl.text = String(format: "%.2f", (weightMaintenance! * 28 * 0.333 / 9)) + " гр"
+            carbohydrateRateLbl.text = String(format: "%.2f", (weightMaintenance! * 28 * 0.4 / 4)) + " гр"
+            totalCaloriesLbl.text = String(format: "%.2f", (weightMaintenance! * 28))
         } else if massGain != nil {
-            proteinRateLbl.text = String(format: "%.2f", (massGain! * 32 * 0.333 / 4))
-            fatRateLbl.text = String(format: "%.2f", (massGain! * 32 * 0.333 / 9))
-            carbohydrateRateLbl.text = String(format: "%.2f", (massGain! * 32 * 0.4 / 4))
-            totalCaloriesLbl.text = (massGain! * 32).description
+            proteinRateLbl.text = String(format: "%.2f", (massGain! * 32 * 0.333 / 4)) + " гр"
+            fatRateLbl.text = String(format: "%.2f", (massGain! * 32 * 0.333 / 9)) + " гр"
+            carbohydrateRateLbl.text = String(format: "%.2f", (massGain! * 32 * 0.4 / 4)) + " гр"
+            totalCaloriesLbl.text = String(format: "%.2f", (massGain! * 32))
         }
     }
     
@@ -68,6 +68,7 @@ final class CalculatorVC: UIViewController {
             textField.text = ""
         } else {
             textField.isHidden = true
+            textField.text = ""
         }
     }
     
@@ -94,6 +95,6 @@ final class CalculatorVC: UIViewController {
     // Скрытие клавиатуры по тапу за пределами Text Field
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
-        view.endEditing(true) // Скрывает клавиатуру, вызванную для любого объекта
+        view.endEditing(true)
     }
 }
