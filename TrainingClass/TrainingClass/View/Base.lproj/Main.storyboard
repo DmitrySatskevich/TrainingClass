@@ -84,7 +84,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aw0-0j-REp">
-                                <rect key="frame" x="50" y="179" width="243" height="100.33333333333331"/>
+                                <rect key="frame" x="50" y="223.00000000000003" width="243" height="100.33333333333334"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">Trening 
 Class</string>
@@ -93,7 +93,7 @@ Class</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Стань лучшей версией себя!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FLZ-JI-SCH">
-                                <rect key="frame" x="50" y="123.66666666666667" width="293" height="25.333333333333329"/>
+                                <rect key="frame" x="50" y="167.66666666666666" width="293" height="25.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
                                 <color key="textColor" systemColor="systemGroupedBackgroundColor"/>
                                 <nil key="highlightedColor"/>
@@ -113,6 +113,7 @@ Class</string>
                             <constraint firstItem="aw0-0j-REp" firstAttribute="top" secondItem="FLZ-JI-SCH" secondAttribute="bottom" constant="30" id="zRF-Bm-CvE"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="mtX-Xp-4HD"/>
                     <connections>
                         <outlet property="emailTF" destination="IX4-e3-dyD" id="JA1-Md-WYp"/>
                         <outlet property="errorLbl" destination="nOk-vV-hHy" id="tUc-44-mtE"/>
@@ -137,7 +138,7 @@ Class</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bw1-l9-tXi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3415" y="737"/>
+            <point key="canvasLocation" x="2042" y="731"/>
         </scene>
         <!--Питание-->
         <scene sceneID="NM4-x9-Au1">
@@ -153,7 +154,7 @@ Class</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SYy-d9-Ms3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4219" y="737"/>
+            <point key="canvasLocation" x="2749" y="731"/>
         </scene>
         <!--Калькулятор-->
         <scene sceneID="AW6-q1-FH8">
@@ -164,7 +165,7 @@ Class</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="fMw-5o-S4k">
-                                <rect key="frame" x="25" y="127.99999999999999" width="343" height="233.66666666666663"/>
+                                <rect key="frame" x="25" y="83.999999999999986" width="343" height="233.66666666666663"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="КАЛЬКУЛЯТОР КАЛОРИЙ" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yel-Jj-DvI">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="31.333333333333332"/>
@@ -213,7 +214,7 @@ Class</string>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aPa-Xf-O0X">
-                                        <rect key="frame" x="0.0" y="158.33333333333331" width="343" height="23"/>
+                                        <rect key="frame" x="0.0" y="158.33333333333334" width="343" height="23"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Суточная норма углеводов" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fjb-I8-coy">
                                                 <rect key="frame" x="0.0" y="0.0" width="240.33333333333334" height="23"/>
@@ -255,7 +256,7 @@ Class</string>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="uPc-8F-NF7">
-                                <rect key="frame" x="85" y="401.66666666666669" width="283" height="171.33333333333331"/>
+                                <rect key="frame" x="85" y="357.66666666666669" width="283" height="171.33333333333331"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Укажите свой вес" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZf-EF-CDw">
                                         <rect key="frame" x="0.0" y="0.0" width="283" height="14.333333333333334"/>
@@ -318,7 +319,7 @@ Class</string>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f7y-V1-TLG">
-                                        <rect key="frame" x="0.0" y="136.99999999999994" width="283" height="34.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="137" width="283" height="34.333333333333343"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9YV-mF-mNk">
                                                 <rect key="frame" x="0.0" y="0.0" width="283" height="34.333333333333336"/>
@@ -347,7 +348,7 @@ Class</string>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RXb-Nj-Xn5">
-                                <rect key="frame" x="231.33333333333337" y="598" width="136.66666666666663" height="38"/>
+                                <rect key="frame" x="231.33333333333337" y="554" width="136.66666666666663" height="38"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Рассчитать">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
@@ -385,14 +386,13 @@ Class</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dwA-FN-FAo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5024" y="737"/>
+            <point key="canvasLocation" x="3433" y="731"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="fAX-JP-KCx">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="5Iv-CS-n4B" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainTabBarController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5Iv-CS-n4B" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="q4d-DF-fow"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RM9-3H-OPg">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -401,7 +401,7 @@ Class</string>
                         <color key="selectedImageTintColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Z5a-Y1-i9U" kind="relationship" relationship="viewControllers" id="ttZ-TO-xv4"/>
+                        <segue destination="Z5a-Y1-i9U" kind="relationship" relationship="viewControllers" id="J7d-7Y-zJn"/>
                         <segue destination="L3S-0d-Kns" kind="relationship" relationship="viewControllers" id="V6T-UF-9zW"/>
                         <segue destination="QX5-e2-j47" kind="relationship" relationship="viewControllers" id="gEc-RI-Fab"/>
                         <segue destination="A6S-PY-O6x" kind="relationship" relationship="viewControllers" id="czN-OE-gVN"/>
@@ -409,7 +409,7 @@ Class</string>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uff-an-Xis" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2614.5038167938928" y="-2.1126760563380285"/>
+            <point key="canvasLocation" x="1833" y="-2"/>
         </scene>
         <!--Главная-->
         <scene sceneID="OqC-vA-zB1">
@@ -539,7 +539,7 @@ Class</string>
                                                             <color key="baseForegroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
                                                         <connections>
-                                                            <action selector="button" destination="Z5a-Y1-i9U" eventType="touchUpInside" id="rc3-eH-Z84"/>
+                                                            <action selector="logoutTapped:" destination="Z5a-Y1-i9U" eventType="touchUpInside" id="NK4-FE-Gb0"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -562,7 +562,7 @@ Class</string>
                         <viewLayoutGuide key="safeArea" id="Ufc-S5-pq2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Главная" image="house" catalog="system" id="K5o-cg-AAE"/>
+                    <tabBarItem key="tabBarItem" title="Главная" image="house" catalog="system" id="NRz-iN-9bE"/>
                     <navigationItem key="navigationItem" id="AqV-qW-ApP"/>
                     <connections>
                         <outlet property="fourMonthsImageView" destination="cPI-Ta-1c1" id="yLZ-7A-SzZ"/>
@@ -573,7 +573,7 @@ Class</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0G5-Hm-nms" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2613" y="737"/>
+            <point key="canvasLocation" x="1346" y="731"/>
         </scene>
         <!--Training ListVC-->
         <scene sceneID="TEQ-vY-gXf">
@@ -837,12 +837,12 @@ Class</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iww-Rh-J93" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2612.9770992366412" y="1395.0704225352113"/>
+            <point key="canvasLocation" x="1346" y="1415"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qnn-RJ-GDZ">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Pqn-v4-4DW" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="LoginNavigationController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Pqn-v4-4DW" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="T0K-gK-xZF"/>
                     <nil key="simulatedBottomBarMetrics"/>
@@ -852,12 +852,12 @@ Class</string>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="5Iv-CS-n4B" kind="relationship" relationship="rootViewController" id="T5b-nh-I8t"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ygh-DO-6lf"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XUU-30-NzR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1839" y="-2"/>
+            <point key="canvasLocation" x="245" y="-2"/>
         </scene>
     </scenes>
     <resources>

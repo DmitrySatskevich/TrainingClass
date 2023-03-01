@@ -34,9 +34,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
             }
             
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            if let HomepageVC = storyboard.instantiateViewController(withIdentifier: "HomepageVC") as? HomepageVC {
-                self?.navigationController?.pushViewController(HomepageVC, animated: true)
-            }
+            let mainTabBarController = storyboard.instantiateViewController(identifier: "MainTabBarController")
+            
+            (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?
+                .changeRootViewController(mainTabBarController)
         }
     }
     
@@ -61,12 +62,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
             if let error {
                 self?.displayErrorLabel(withText: "Error occured: \(error.localizedDescription)")
             } else if let _ = user {
-                
                 // если замыкание отрабатывает без ошибок, перейти на новый экран
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                if let HomepageVC = storyboard.instantiateViewController(withIdentifier: "HomepageVC") as? HomepageVC {
-                    self?.navigationController?.pushViewController(HomepageVC, animated: true)
-                }
+                let mainTabBarController = storyboard.instantiateViewController(identifier: "MainTabBarController")
+                
+                (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?
+                    .changeRootViewController(mainTabBarController)
             }
         }
     }
@@ -97,10 +98,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
     @IBAction func forgotYourPasswordAction() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let HomepageVC = storyboard.instantiateViewController(withIdentifier:
-            "HomepageVC") as? HomepageVC {
-            self.navigationController?.pushViewController(HomepageVC, animated: true)
-        }
+        let mainTabBarController = storyboard.instantiateViewController(identifier: "MainTabBarController")
+        
+        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?
+            .changeRootViewController(mainTabBarController)
     }
     
     // анимация появления Error
