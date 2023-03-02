@@ -22,38 +22,51 @@ class HomepageVC: UIViewController {
         super.viewDidLoad()
         
         tapGestureRecognizerFunc(ImageView: oneMonthImageView)
-        tapGestureRecognizerFunc(ImageView: twoMonthsImageView)
-        tapGestureRecognizerFunc(ImageView: threeMonthsImageView)
-        tapGestureRecognizerFunc(ImageView: fourMonthsImageView)
+        
+        size()
+    }
+    
+    private func size() {
+        oneMonthImageView.layer.cornerRadius = 20
+        twoMonthsImageView.layer.cornerRadius = 20
+        threeMonthsImageView.layer.cornerRadius = 20
+        fourMonthsImageView.layer.cornerRadius = 20
     }
     
     private func tapGestureRecognizerFunc(ImageView: UIImageView) {
         let tapGestureRecognizer = UITapGestureRecognizer(
             target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
-        
+
         ImageView.addGestureRecognizer(tapGestureRecognizer)
         ImageView.isUserInteractionEnabled = true
     }
     
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer) {
-        _ = tapGestureRecognizer.view as! UIImageView
+        
+        _ = tapGestureRecognizer.view as? UIImageView
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let TrainingListVC = storyboard.instantiateViewController(withIdentifier:
-            "TrainingList") as? TrainingListVC {
-            navigationController?.pushViewController(TrainingListVC, animated: true)
+        if let trainingListVC = storyboard.instantiateViewController(withIdentifier: "TrainingList") as? TrainingListVC {
+            navigationController?.pushViewController(trainingListVC, animated: true)
         }
     }
     
-//    @IBAction func button() {
-//        do {
-//            try Auth.auth().signOut()
-//            dismiss(animated: true, completion: nil)
-//        } catch {
-//            print(error.localizedDescription)
-//        }
-//    }
+    // выход из акаунта
+    @IBAction func logoutTapped(_ sender: UIButton) {
+        
+        do {
+            try Auth.auth().signOut()
+            dismiss(animated: true, completion: nil)
+        } catch {
+            print(error.localizedDescription)
+        }
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let loginNavController = storyboard.instantiateViewController(identifier: "LoginNavigationController")
 
+        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?
+            .changeRootViewController(loginNavController)
+    }
 }
 
 

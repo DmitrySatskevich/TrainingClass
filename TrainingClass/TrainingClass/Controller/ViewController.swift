@@ -9,7 +9,7 @@ import UIKit
 import FirebaseDatabase
 import FirebaseAuth
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     
     var ref: DatabaseReference!
     
@@ -25,17 +25,20 @@ class ViewController: UIViewController {
         emailTF.delegate = self
         passwordTF.delegate = self
         ref = Database.database().reference(withPath: "users")
+        notificationCenter()
         
         // если пользователь уже есть, производим переход в личный кабинет
         authStateDidChangeListenerHandle = Auth.auth().addStateDidChangeListener { [weak self] _, user in
             guard let _ = user else {
                 return
             }
-            self?.performSegue(withIdentifier: "homepage", sender: nil)
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let mainTabBarController = storyboard.instantiateViewController(identifier: "MainTabBarController")
+            
+            (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?
+                .changeRootViewController(mainTabBarController)
         }
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(kbDidShow), name: UIWindow.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(kbDidHide), name: UIWindow.keyboardWillHideNotification, object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -60,7 +63,11 @@ class ViewController: UIViewController {
                 self?.displayErrorLabel(withText: "Error occured: \(error.localizedDescription)")
             } else if let _ = user {
                 // если замыкание отрабатывает без ошибок, перейти на новый экран
-                self?.performSegue(withIdentifier: "homepage", sender: nil)
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let mainTabBarController = storyboard.instantiateViewController(identifier: "MainTabBarController")
+                
+                (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?
+                    .changeRootViewController(mainTabBarController)
             }
         }
     }
@@ -90,7 +97,11 @@ class ViewController: UIViewController {
     }
         
     @IBAction func forgotYourPasswordAction() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let mainTabBarController = storyboard.instantiateViewController(identifier: "MainTabBarController")
         
+        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?
+            .changeRootViewController(mainTabBarController)
     }
     
     // анимация появления Error
@@ -106,6 +117,13 @@ class ViewController: UIViewController {
                        }) { [weak self] _ in
             self?.errorLbl.alpha = 0
         }
+    }
+    
+    private func notificationCenter() {
+        NotificationCenter.default.addObserver(self, selector: #selector(kbDidShow), name:
+                                                UIWindow.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(kbDidHide), name:
+                                                UIWindow.keyboardWillHideNotification, object: nil)
     }
     
     //  Смещение экрана при появлении клавиатуры
@@ -124,7 +142,7 @@ class ViewController: UIViewController {
 
 // MARK: - ViewController + UITextFieldDelegate
 
-extension ViewController: UITextFieldDelegate {
+extension ViewController {
 //    Скрываем клавиатуру, по нажатию "return".
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
