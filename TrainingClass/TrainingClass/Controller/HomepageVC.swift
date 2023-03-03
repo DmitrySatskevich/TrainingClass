@@ -46,8 +46,8 @@ class HomepageVC: UIViewController {
         _ = tapGestureRecognizer.view as? UIImageView
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let trainingListVC = storyboard.instantiateViewController(withIdentifier: "TrainingList") as? TrainingListVC {
-            navigationController?.pushViewController(trainingListVC, animated: true)
+        if let vc = storyboard.instantiateViewController(withIdentifier: "TrainingList") as? TrainingListVC {
+            present(vc, animated: false, completion: nil)
         }
     }
     
@@ -56,16 +56,9 @@ class HomepageVC: UIViewController {
         
         do {
             try Auth.auth().signOut()
-            dismiss(animated: true, completion: nil)
         } catch {
             print(error.localizedDescription)
         }
-        
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let loginNavController = storyboard.instantiateViewController(identifier: "LoginNavigationController")
-
-        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?
-            .changeRootViewController(loginNavController)
     }
 }
 
