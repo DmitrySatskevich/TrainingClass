@@ -17,9 +17,6 @@ class TrainingListVC: UIViewController {
     }
     
     
-    
-    
-    
     // MARK: - Navigation
 
      @IBAction func exitAction() {

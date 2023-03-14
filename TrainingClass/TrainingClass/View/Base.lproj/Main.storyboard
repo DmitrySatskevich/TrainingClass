@@ -131,14 +131,42 @@ Class</string>
                     <view key="view" contentMode="scaleToFill" id="GvY-7w-68o">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uon-bE-eex">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GLP-DR-O1h">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1300"/>
+                                        <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1300" id="fUg-zY-6uA"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="GLP-DR-O1h" secondAttribute="bottom" id="QLP-tD-KIt"/>
+                                    <constraint firstItem="GLP-DR-O1h" firstAttribute="leading" secondItem="uon-bE-eex" secondAttribute="leading" id="Szm-GB-hlA"/>
+                                    <constraint firstAttribute="trailing" secondItem="GLP-DR-O1h" secondAttribute="trailing" id="ZQG-sH-oVI"/>
+                                    <constraint firstItem="GLP-DR-O1h" firstAttribute="top" secondItem="uon-bE-eex" secondAttribute="top" id="hJk-f1-dV7"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="zgx-KK-i1H"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="uon-bE-eex" firstAttribute="trailing" secondItem="GvY-7w-68o" secondAttribute="trailing" id="9N2-ta-whu"/>
+                            <constraint firstItem="uon-bE-eex" firstAttribute="top" secondItem="GvY-7w-68o" secondAttribute="top" id="PfG-A8-o65"/>
+                            <constraint firstItem="uon-bE-eex" firstAttribute="leading" secondItem="GvY-7w-68o" secondAttribute="leading" id="S2W-x5-Kib"/>
+                            <constraint firstItem="GLP-DR-O1h" firstAttribute="width" secondItem="GvY-7w-68o" secondAttribute="width" id="nMl-qK-JRR"/>
+                            <constraint firstAttribute="bottom" secondItem="uon-bE-eex" secondAttribute="bottom" id="xWr-m1-EEh"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Рекомендации" image="doc.plaintext" catalog="system" id="ZmW-aa-0M9"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bw1-l9-tXi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2042" y="731"/>
+            <point key="canvasLocation" x="2041.9847328244275" y="730.98591549295782"/>
         </scene>
         <!--Питание-->
         <scene sceneID="NM4-x9-Au1">
@@ -640,6 +668,9 @@ Class</string>
                                                             <fontDescription key="titleFontDescription" type="system" weight="black" pointSize="17"/>
                                                             <color key="baseForegroundColor" red="0.77254903320000001" green="0.64313727620000005" blue="0.21960783" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <segue destination="ZoV-wy-3Xg" kind="presentation" modalPresentationStyle="fullScreen" id="F3c-ER-QN3"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wws-Xb-WT9">
                                                         <rect key="frame" x="112.66666666666666" y="0.0" width="107.66666666666666" height="34.333333333333336"/>
@@ -825,7 +856,7 @@ Class</string>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="НАЗАД">
-                                    <fontDescription key="titleFontDescription" type="system" weight="black" pointSize="11"/>
+                                    <fontDescription key="titleFontDescription" type="system" weight="black" pointSize="12"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" red="0.77254903320000001" green="0.64313727620000005" blue="0.21960783" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
@@ -856,7 +887,126 @@ Class</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iww-Rh-J93" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1346" y="1415"/>
+            <point key="canvasLocation" x="1366" y="1385"/>
+        </scene>
+        <!--Передать номер тренировки-->
+        <scene sceneID="eVX-7F-xz9">
+            <objects>
+                <viewController id="tzY-TZ-BVo" customClass="DetailTrainingListVC" customModule="TrainingClass" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="T5u-ah-uBU">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2G9-cX-ovi">
+                                <rect key="frame" x="0.0" y="103" width="393" height="325"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7FB-Z6-Nty">
+                                        <rect key="frame" x="0.0" y="0.0" width="986" height="325"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eLT-bS-Y02">
+                                                <rect key="frame" x="25" y="5" width="315" height="315"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="eLT-bS-Y02" secondAttribute="height" multiplier="1:1" id="RiT-Yo-wXu"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Aem-P7-gud">
+                                                <rect key="frame" x="345" y="5" width="315" height="315"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fw2-zV-TC1">
+                                                <rect key="frame" x="665" y="5" width="315" height="315"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Fw2-zV-TC1" secondAttribute="height" multiplier="1:1" id="IaM-3e-5bp"/>
+                                                </constraints>
+                                            </imageView>
+                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="seP-gZ-V4I">
+                                                <rect key="frame" x="173" y="153" width="20" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="20" id="S6Y-Gf-Ggn"/>
+                                                    <constraint firstAttribute="height" constant="20" id="Tfh-4F-hSt"/>
+                                                </constraints>
+                                                <color key="color" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </activityIndicatorView>
+                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="zc6-nr-NOP">
+                                                <rect key="frame" x="492" y="152" width="20" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="J1r-Bo-eCZ"/>
+                                                    <constraint firstAttribute="width" constant="20" id="nVO-ag-Kfm"/>
+                                                </constraints>
+                                                <color key="color" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </activityIndicatorView>
+                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="TbT-Ls-V3M">
+                                                <rect key="frame" x="812" y="153" width="20" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="4Hs-jV-Twt"/>
+                                                    <constraint firstAttribute="width" constant="20" id="vGq-xH-Adg"/>
+                                                </constraints>
+                                                <color key="color" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </activityIndicatorView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="eLT-bS-Y02" firstAttribute="top" secondItem="7FB-Z6-Nty" secondAttribute="top" constant="5" id="5aN-5Z-Wai"/>
+                                            <constraint firstItem="Fw2-zV-TC1" firstAttribute="top" secondItem="7FB-Z6-Nty" secondAttribute="top" constant="5" id="5b0-RA-W5e"/>
+                                            <constraint firstItem="Aem-P7-gud" firstAttribute="top" secondItem="zc6-nr-NOP" secondAttribute="bottom" constant="-167" id="CJi-IP-3jp"/>
+                                            <constraint firstItem="Aem-P7-gud" firstAttribute="top" secondItem="7FB-Z6-Nty" secondAttribute="top" constant="5" id="Ghi-n5-djv"/>
+                                            <constraint firstAttribute="width" constant="986" id="IMT-st-j0H"/>
+                                            <constraint firstItem="eLT-bS-Y02" firstAttribute="leading" secondItem="7FB-Z6-Nty" secondAttribute="leading" constant="25" id="IdD-EP-kTh"/>
+                                            <constraint firstItem="seP-gZ-V4I" firstAttribute="top" secondItem="eLT-bS-Y02" secondAttribute="bottom" constant="-167" id="J6A-Jj-TpV"/>
+                                            <constraint firstItem="Fw2-zV-TC1" firstAttribute="leading" secondItem="Aem-P7-gud" secondAttribute="trailing" constant="5" id="JER-Kv-V4e"/>
+                                            <constraint firstItem="TbT-Ls-V3M" firstAttribute="top" secondItem="Fw2-zV-TC1" secondAttribute="bottom" constant="-167" id="NVA-ft-gPU"/>
+                                            <constraint firstItem="Aem-P7-gud" firstAttribute="width" secondItem="Aem-P7-gud" secondAttribute="height" multiplier="1:1" id="VOK-bm-Bzy"/>
+                                            <constraint firstItem="Aem-P7-gud" firstAttribute="leading" secondItem="zc6-nr-NOP" secondAttribute="trailing" constant="-167" id="WSE-GM-VHz"/>
+                                            <constraint firstItem="seP-gZ-V4I" firstAttribute="leading" secondItem="eLT-bS-Y02" secondAttribute="trailing" constant="-167" id="drP-g3-8lm"/>
+                                            <constraint firstItem="Aem-P7-gud" firstAttribute="leading" secondItem="eLT-bS-Y02" secondAttribute="trailing" constant="5" id="eDt-K3-Dvf"/>
+                                            <constraint firstAttribute="bottom" secondItem="Aem-P7-gud" secondAttribute="bottom" constant="5" id="f3W-xo-v5Y"/>
+                                            <constraint firstAttribute="bottom" secondItem="eLT-bS-Y02" secondAttribute="bottom" constant="5" id="mei-NL-r4k"/>
+                                            <constraint firstAttribute="bottom" secondItem="Fw2-zV-TC1" secondAttribute="bottom" constant="5" id="nfT-py-oul"/>
+                                            <constraint firstAttribute="height" constant="325" id="o9b-Vv-97m"/>
+                                            <constraint firstItem="Fw2-zV-TC1" firstAttribute="leading" secondItem="TbT-Ls-V3M" secondAttribute="trailing" constant="-167" id="p3m-wZ-w0h"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="7FB-Z6-Nty" firstAttribute="height" secondItem="MeU-yf-TBG" secondAttribute="height" id="39R-Z0-207"/>
+                                    <constraint firstAttribute="height" constant="325" id="WUX-FO-pUr"/>
+                                    <constraint firstItem="7FB-Z6-Nty" firstAttribute="top" secondItem="2G9-cX-ovi" secondAttribute="top" id="Y3f-qF-i7F"/>
+                                    <constraint firstItem="7FB-Z6-Nty" firstAttribute="leading" secondItem="2G9-cX-ovi" secondAttribute="leading" id="jMh-4f-yTb"/>
+                                    <constraint firstAttribute="bottom" secondItem="7FB-Z6-Nty" secondAttribute="bottom" id="q20-kg-Vwj"/>
+                                    <constraint firstAttribute="trailing" secondItem="7FB-Z6-Nty" secondAttribute="trailing" id="sWx-6a-1Ob"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="MeU-yf-TBG"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="Pmf-VK-w0w"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="a5b-T8-06k"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="a5b-T8-06k" firstAttribute="bottom" secondItem="2G9-cX-ovi" secondAttribute="bottom" constant="390" id="JLy-Uq-zla"/>
+                            <constraint firstItem="2G9-cX-ovi" firstAttribute="trailing" secondItem="a5b-T8-06k" secondAttribute="trailing" id="SLj-KS-xVc"/>
+                            <constraint firstItem="2G9-cX-ovi" firstAttribute="leading" secondItem="a5b-T8-06k" secondAttribute="leading" id="Zs6-AP-C0n"/>
+                            <constraint firstItem="2G9-cX-ovi" firstAttribute="top" secondItem="a5b-T8-06k" secondAttribute="top" id="o8i-zB-15A"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Передать номер тренировки" id="zv6-hO-mY9">
+                        <barButtonItem key="leftBarButtonItem" title="Назад" id="SBF-Eb-WtD">
+                            <color key="tintColor" red="0.96078431610000004" green="0.74509805439999999" blue="0.25490197539999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="signOutItem:" destination="tzY-TZ-BVo" id="VeK-uX-ZOv"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imageViewOne" destination="eLT-bS-Y02" id="gxL-6O-tOj"/>
+                        <outlet property="imageViewThree" destination="Fw2-zV-TC1" id="6XD-70-gid"/>
+                        <outlet property="imageViewTwo" destination="Aem-P7-gud" id="1X2-To-zLa"/>
+                        <outletCollection property="activityIndicators" destination="seP-gZ-V4I" collectionClass="NSMutableArray" id="YGe-Go-kop"/>
+                        <outletCollection property="activityIndicators" destination="zc6-nr-NOP" collectionClass="NSMutableArray" id="bAi-Vk-UZE"/>
+                        <outletCollection property="activityIndicators" destination="TbT-Ls-V3M" collectionClass="NSMutableArray" id="DOV-JW-GnP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ugp-eK-yxp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2133.5877862595421" y="2092.9577464788736"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qnn-RJ-GDZ">
@@ -878,6 +1028,28 @@ Class</string>
             </objects>
             <point key="canvasLocation" x="245" y="-2"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="HLO-sl-G20">
+            <objects>
+                <navigationController storyboardIdentifier="NavigationDetailTrainingListVC" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZoV-wy-3Xg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="ZsF-wj-fg6"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fQH-Zw-ceQ">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="tzY-TZ-BVo" kind="relationship" relationship="rootViewController" id="ieJ-7c-DWN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G0k-hl-6DF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1366" y="2093"/>
+        </scene>
     </scenes>
     <resources>
         <image name="ChooseYourProgram" width="707" height="471.33334350585938"/>
@@ -894,6 +1066,9 @@ Class</string>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGroupedBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

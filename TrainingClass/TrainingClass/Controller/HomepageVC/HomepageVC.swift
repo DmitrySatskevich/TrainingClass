@@ -9,7 +9,7 @@ import UIKit
 import Firebase
 import FirebaseStorage
 
-class HomepageVC: UIViewController {
+final class HomepageVC: UIViewController {
     
     private var user: User!
     
@@ -22,7 +22,6 @@ class HomepageVC: UIViewController {
         super.viewDidLoad()
         
         tapGestureRecognizerFunc(ImageView: oneMonthImageView)
-        
         size()
     }
     
@@ -53,7 +52,6 @@ class HomepageVC: UIViewController {
     
     // выход из акаунта
     @IBAction func logoutTapped(_ sender: UIButton) {
-        
         do {
             try Auth.auth().signOut()
         } catch {

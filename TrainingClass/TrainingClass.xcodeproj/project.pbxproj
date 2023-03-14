@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		F500D3AA29A65ECD00840EAD /* CalculatorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F500D3A929A65ECD00840EAD /* CalculatorVC.swift */; };
+		F504310829B627D1006679AC /* DetailTrainingListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F504310729B627D1006679AC /* DetailTrainingListVC.swift */; };
 		F522D49D298FB99600D1FA30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F522D49C298FB99600D1FA30 /* AppDelegate.swift */; };
 		F522D49F298FB99600D1FA30 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F522D49E298FB99600D1FA30 /* SceneDelegate.swift */; };
 		F522D4A1298FB99600D1FA30 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F522D4A0298FB99600D1FA30 /* ViewController.swift */; };
 		F522D4A4298FB99600D1FA30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F522D4A2298FB99600D1FA30 /* Main.storyboard */; };
 		F522D4A6298FB99700D1FA30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F522D4A5298FB99700D1FA30 /* Assets.xcassets */; };
 		F522D4A9298FB99700D1FA30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F522D4A7298FB99700D1FA30 /* LaunchScreen.storyboard */; };
+		F526E4BF29C0BB9F005045A7 /* ConvertToGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = F526E4BE29C0BB9F005045A7 /* ConvertToGif.swift */; };
+		F526E4C129C0BC08005045A7 /* UrlFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = F526E4C029C0BC08005045A7 /* UrlFiles.swift */; };
 		F52ECD652993D75E007CE17B /* TrainingListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52ECD642993D75E007CE17B /* TrainingListVC.swift */; };
 		F565592829910525003AB984 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F565592729910525003AB984 /* GoogleService-Info.plist */; };
 		F5EC8398298FCF1F00E9205A /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = F5EC8397298FCF1F00E9205A /* FirebaseAnalytics */; };
@@ -27,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		F500D3A929A65ECD00840EAD /* CalculatorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorVC.swift; sourceTree = "<group>"; };
+		F504310729B627D1006679AC /* DetailTrainingListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTrainingListVC.swift; sourceTree = "<group>"; };
 		F522D499298FB99600D1FA30 /* TrainingClass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrainingClass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F522D49C298FB99600D1FA30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F522D49E298FB99600D1FA30 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,6 +39,8 @@
 		F522D4A5298FB99700D1FA30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F522D4A8298FB99700D1FA30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F522D4AA298FB99700D1FA30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F526E4BE29C0BB9F005045A7 /* ConvertToGif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertToGif.swift; sourceTree = "<group>"; };
+		F526E4C029C0BC08005045A7 /* UrlFiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlFiles.swift; sourceTree = "<group>"; };
 		F52ECD642993D75E007CE17B /* TrainingListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingListVC.swift; sourceTree = "<group>"; };
 		F565592729910525003AB984 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F5EC83A3298FD20100E9205A /* UserRegistrationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegistrationModel.swift; sourceTree = "<group>"; };
@@ -63,6 +69,16 @@
 				F500D3A929A65ECD00840EAD /* CalculatorVC.swift */,
 			);
 			path = CalculatorVC;
+			sourceTree = "<group>";
+		};
+		F504310629B62767006679AC /* DetailTrainingListVC */ = {
+			isa = PBXGroup;
+			children = (
+				F504310729B627D1006679AC /* DetailTrainingListVC.swift */,
+				F526E4BE29C0BB9F005045A7 /* ConvertToGif.swift */,
+				F526E4C029C0BC08005045A7 /* UrlFiles.swift */,
+			);
+			path = DetailTrainingListVC;
 			sourceTree = "<group>";
 		};
 		F522D490298FB99600D1FA30 = {
@@ -116,9 +132,8 @@
 		F522D4B2298FB9D300D1FA30 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				F522D4A0298FB99600D1FA30 /* ViewController.swift */,
-				F5EC83A5298FD45D00E9205A /* HomepageVC.swift */,
-				F52ECD642993D75E007CE17B /* TrainingListVC.swift */,
+				F5BFCCC529B22E4700FCFD65 /* RegisterVC */,
+				F5BFCCC629B22EAB00FCFD65 /* HomepageVC */,
 				F500D3A829A65EA400840EAD /* CalculatorVC */,
 			);
 			path = Controller;
@@ -130,6 +145,32 @@
 				F5EC83A3298FD20100E9205A /* UserRegistrationModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		F5BFCCC529B22E4700FCFD65 /* RegisterVC */ = {
+			isa = PBXGroup;
+			children = (
+				F522D4A0298FB99600D1FA30 /* ViewController.swift */,
+			);
+			path = RegisterVC;
+			sourceTree = "<group>";
+		};
+		F5BFCCC629B22EAB00FCFD65 /* HomepageVC */ = {
+			isa = PBXGroup;
+			children = (
+				F5EC83A5298FD45D00E9205A /* HomepageVC.swift */,
+				F5BFCCC729B22EC500FCFD65 /* TrainingListVC */,
+				F504310629B62767006679AC /* DetailTrainingListVC */,
+			);
+			path = HomepageVC;
+			sourceTree = "<group>";
+		};
+		F5BFCCC729B22EC500FCFD65 /* TrainingListVC */ = {
+			isa = PBXGroup;
+			children = (
+				F52ECD642993D75E007CE17B /* TrainingListVC.swift */,
+			);
+			path = TrainingListVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,9 +256,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F52ECD652993D75E007CE17B /* TrainingListVC.swift in Sources */,
+				F526E4BF29C0BB9F005045A7 /* ConvertToGif.swift in Sources */,
+				F504310829B627D1006679AC /* DetailTrainingListVC.swift in Sources */,
 				F522D4A1298FB99600D1FA30 /* ViewController.swift in Sources */,
 				F5EC83A4298FD20100E9205A /* UserRegistrationModel.swift in Sources */,
 				F522D49D298FB99600D1FA30 /* AppDelegate.swift in Sources */,
+				F526E4C129C0BC08005045A7 /* UrlFiles.swift in Sources */,
 				F5EC83A6298FD45D00E9205A /* HomepageVC.swift in Sources */,
 				F500D3AA29A65ECD00840EAD /* CalculatorVC.swift in Sources */,
 				F522D49F298FB99600D1FA30 /* SceneDelegate.swift in Sources */,
