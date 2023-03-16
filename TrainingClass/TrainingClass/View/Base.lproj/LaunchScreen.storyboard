@@ -17,9 +17,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYd-4T-79M">
-                                <rect key="frame" x="91.333333333333329" y="367.66666666666669" width="210.33333333333337" height="117"/>
-                                <string key="text">Training 
-Class</string>
+                                <rect key="frame" x="71" y="367.66666666666669" width="251" height="117"/>
+                                <string key="text">TRAINING 
+CLUB</string>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="49"/>
                                 <color key="textColor" systemColor="systemYellowColor"/>
                                 <nil key="highlightedColor"/>

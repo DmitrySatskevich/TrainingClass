@@ -75,8 +75,6 @@
 			isa = PBXGroup;
 			children = (
 				F504310729B627D1006679AC /* DetailTrainingListVC.swift */,
-				F526E4BE29C0BB9F005045A7 /* ConvertToGif.swift */,
-				F526E4C029C0BC08005045A7 /* UrlFiles.swift */,
 			);
 			path = DetailTrainingListVC;
 			sourceTree = "<group>";
@@ -103,6 +101,7 @@
 				F522D4B3298FB9E500D1FA30 /* Model */,
 				F522D4B1298FB9C600D1FA30 /* View */,
 				F522D4B2298FB9D300D1FA30 /* Controller */,
+				F55B9BA929C38EAB0036FD60 /* NetworkService */,
 				F522D4A5298FB99700D1FA30 /* Assets.xcassets */,
 				F565592729910525003AB984 /* GoogleService-Info.plist */,
 				F522D4B0298FB9AD00D1FA30 /* AppDelegate */,
@@ -143,8 +142,17 @@
 			isa = PBXGroup;
 			children = (
 				F5EC83A3298FD20100E9205A /* UserRegistrationModel.swift */,
+				F526E4C029C0BC08005045A7 /* UrlFiles.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		F55B9BA929C38EAB0036FD60 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				F526E4BE29C0BB9F005045A7 /* ConvertToGif.swift */,
+			);
+			path = NetworkService;
 			sourceTree = "<group>";
 		};
 		F5BFCCC529B22E4700FCFD65 /* RegisterVC */ = {

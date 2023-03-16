@@ -7,12 +7,6 @@
 
 import UIKit
 
-enum Sss {
-    case weightLoss
-    case weightMaintenance
-    case massGain
-}
-
 final class CalculatorVC: UIViewController {
     
     @IBOutlet weak private var proteinRateLbl: UILabel!
@@ -23,26 +17,6 @@ final class CalculatorVC: UIViewController {
     @IBOutlet weak private var weightLossTFOutlet: UITextField!
     @IBOutlet weak private var weightMaintenanceTFOutlet: UITextField!
     @IBOutlet weak private var massGainTFOutlet: UITextField!
-    
-    
-    
-    var weightLoss: Double? {
-        didSet {
-            weightLossFunc()
-        }
-    }
-
-    var weightMaintenance: Double? {
-        didSet {
-            weightMaintenanceFunc()
-        }
-    }
-
-    var massGain: Double? {
-        didSet {
-            massGainFunc()
-        }
-    }
         
     
     override func viewDidLoad() {
@@ -69,56 +43,23 @@ final class CalculatorVC: UIViewController {
         let weightMaintenance: Double? = Double(weightMaintenanceTFOutlet.text!)
         let massGain: Double? = Double(massGainTFOutlet.text!)
         
+//         логика отображения КБЖУ
         if weightLoss != nil {
-            weightLossFunc()
+            proteinRateLbl.text = String(format: "%.2f", (weightLoss! * 25 * 0.333 / 4)) + " гр"
+            fatRateLbl.text = String(format: "%.2f", (weightLoss! * 25 * 0.333 / 9)) + " гр"
+            carbohydrateRateLbl.text = String(format: "%.2f", (weightLoss! * 25 * 0.4 / 4)) + " гр"
+            totalCaloriesLbl.text = String(format: "%.2f", (weightLoss! * 25))
         } else if weightMaintenance != nil {
-            weightMaintenanceFunc()
+            proteinRateLbl.text = String(format: "%.2f", (weightMaintenance! * 28 * 0.333 / 4)) + " гр"
+            fatRateLbl.text = String(format: "%.2f", (weightMaintenance! * 28 * 0.333 / 9)) + " гр"
+            carbohydrateRateLbl.text = String(format: "%.2f", (weightMaintenance! * 28 * 0.4 / 4)) + " гр"
+            totalCaloriesLbl.text = String(format: "%.2f", (weightMaintenance! * 28))
         } else if massGain != nil {
-            massGainFunc()
+            proteinRateLbl.text = String(format: "%.2f", (massGain! * 32 * 0.333 / 4)) + " гр"
+            fatRateLbl.text = String(format: "%.2f", (massGain! * 32 * 0.333 / 9)) + " гр"
+            carbohydrateRateLbl.text = String(format: "%.2f", (massGain! * 32 * 0.4 / 4)) + " гр"
+            totalCaloriesLbl.text = String(format: "%.2f", (massGain! * 32))
         }
-        
-//        let weightLoss: Double? = Double(weightLossTFOutlet.text!)
-//        let weightMaintenance: Double? = Double(weightMaintenanceTFOutlet.text!)
-//        let massGain: Double? = Double(massGainTFOutlet.text!)
-        
-        // логика отображения КБЖУ
-//        if weightLoss != nil {
-//            proteinRateLbl.text = String(format: "%.2f", (weightLoss! * 25 * 0.333 / 4)) + " гр"
-//            fatRateLbl.text = String(format: "%.2f", (weightLoss! * 25 * 0.333 / 9)) + " гр"
-//            carbohydrateRateLbl.text = String(format: "%.2f", (weightLoss! * 25 * 0.4 / 4)) + " гр"
-//            totalCaloriesLbl.text = String(format: "%.2f", (weightLoss! * 25))
-//        } else if weightMaintenance != nil {
-//            proteinRateLbl.text = String(format: "%.2f", (weightMaintenance! * 28 * 0.333 / 4)) + " гр"
-//            fatRateLbl.text = String(format: "%.2f", (weightMaintenance! * 28 * 0.333 / 9)) + " гр"
-//            carbohydrateRateLbl.text = String(format: "%.2f", (weightMaintenance! * 28 * 0.4 / 4)) + " гр"
-//            totalCaloriesLbl.text = String(format: "%.2f", (weightMaintenance! * 28))
-//        } else if massGain != nil {
-//            proteinRateLbl.text = String(format: "%.2f", (massGain! * 32 * 0.333 / 4)) + " гр"
-//            fatRateLbl.text = String(format: "%.2f", (massGain! * 32 * 0.333 / 9)) + " гр"
-//            carbohydrateRateLbl.text = String(format: "%.2f", (massGain! * 32 * 0.4 / 4)) + " гр"
-//            totalCaloriesLbl.text = String(format: "%.2f", (massGain! * 32))
-//        }
-    }
-    
-     func weightLossFunc() {
-         proteinRateLbl.text = String(format: "%.2f", (weightLoss! * 25.0 * 0.333 / 4.0)) + " гр"
-        fatRateLbl.text = String(format: "%.2f", (weightLoss! * 25 * 0.333 / 9)) + " гр"
-        carbohydrateRateLbl.text = String(format: "%.2f", (weightLoss! * 25 * 0.4 / 4)) + " гр"
-        totalCaloriesLbl.text = String(format: "%.2f", (weightLoss! * 25))
-    }
-    
-     func weightMaintenanceFunc() {
-        proteinRateLbl.text = String(format: "%.2f", (weightMaintenance! * 28 * 0.333 / 4)) + " гр"
-        fatRateLbl.text = String(format: "%.2f", (weightMaintenance! * 28 * 0.333 / 9)) + " гр"
-        carbohydrateRateLbl.text = String(format: "%.2f", (weightMaintenance! * 28 * 0.4 / 4)) + " гр"
-        totalCaloriesLbl.text = String(format: "%.2f", (weightMaintenance! * 28))
-    }
-    
-     func massGainFunc() {
-        proteinRateLbl.text = String(format: "%.2f", (massGain! * 32 * 0.333 / 4)) + " гр"
-        fatRateLbl.text = String(format: "%.2f", (massGain! * 32 * 0.333 / 9)) + " гр"
-        carbohydrateRateLbl.text = String(format: "%.2f", (massGain! * 32 * 0.4 / 4)) + " гр"
-        totalCaloriesLbl.text = String(format: "%.2f", (massGain! * 32))
     }
     
     private func isHiddenUpdate(textField: UITextField) {

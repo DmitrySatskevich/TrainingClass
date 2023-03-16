@@ -27,6 +27,7 @@ extension UIImage {
     
     public class func gifImageWithURL(url: URL) async throws -> UIImage? {
         
+        let session = URLSession.shared
         let (localURL, _) = try await session.download(from: url)
         
         // MARK: - async
