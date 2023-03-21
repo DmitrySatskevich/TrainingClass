@@ -46,7 +46,7 @@ final class HomepageVC: UIViewController {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let vc = storyboard.instantiateViewController(withIdentifier: "TrainingList") as? TrainingListVC {
-            present(vc, animated: false, completion: nil)
+            present(vc, animated: true, completion: nil)
         }
     }
     

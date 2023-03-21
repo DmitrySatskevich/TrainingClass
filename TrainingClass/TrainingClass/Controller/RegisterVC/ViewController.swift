@@ -136,7 +136,7 @@ extension ViewController {
     // Скрытие клавиатуры по тапу за пределами Text Field
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
-        view.endEditing(true) // Скрывает клавиатуру, вызванную для любого объекта
+        view.endEditing(true)
     }
 }
 

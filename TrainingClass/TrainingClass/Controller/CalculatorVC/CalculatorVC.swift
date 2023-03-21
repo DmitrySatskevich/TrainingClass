@@ -27,14 +27,26 @@ final class CalculatorVC: UIViewController {
     
     @IBAction func weightLossButton() {
         isHiddenUpdate(textField: weightLossTFOutlet)
+        if weightLossTFOutlet.isHidden == false {
+            weightMaintenanceTFOutlet.isHidden = true
+            massGainTFOutlet.isHidden = true
+        }
     }
     
     @IBAction func weightMaintenanceButton() {
         isHiddenUpdate(textField: weightMaintenanceTFOutlet)
+        if weightMaintenanceTFOutlet.isHidden == false {
+            weightLossTFOutlet.isHidden = true
+            massGainTFOutlet.isHidden = true
+        }
     }
     
     @IBAction func massGainButton() {
         isHiddenUpdate(textField: massGainTFOutlet)
+        if massGainTFOutlet.isHidden == false {
+            weightLossTFOutlet.isHidden = true
+            weightMaintenanceTFOutlet.isHidden = true
+        }
     }
     
     @IBAction func calculateButton() {
@@ -44,31 +56,51 @@ final class CalculatorVC: UIViewController {
         let massGain: Double? = Double(massGainTFOutlet.text!)
         
 //         логика отображения КБЖУ
-        if weightLoss != nil {
-            proteinRateLbl.text = String(format: "%.2f", (weightLoss! * 25 * 0.333 / 4)) + " гр"
-            fatRateLbl.text = String(format: "%.2f", (weightLoss! * 25 * 0.333 / 9)) + " гр"
-            carbohydrateRateLbl.text = String(format: "%.2f", (weightLoss! * 25 * 0.4 / 4)) + " гр"
-            totalCaloriesLbl.text = String(format: "%.2f", (weightLoss! * 25))
-        } else if weightMaintenance != nil {
-            proteinRateLbl.text = String(format: "%.2f", (weightMaintenance! * 28 * 0.333 / 4)) + " гр"
-            fatRateLbl.text = String(format: "%.2f", (weightMaintenance! * 28 * 0.333 / 9)) + " гр"
-            carbohydrateRateLbl.text = String(format: "%.2f", (weightMaintenance! * 28 * 0.4 / 4)) + " гр"
-            totalCaloriesLbl.text = String(format: "%.2f", (weightMaintenance! * 28))
-        } else if massGain != nil {
-            proteinRateLbl.text = String(format: "%.2f", (massGain! * 32 * 0.333 / 4)) + " гр"
-            fatRateLbl.text = String(format: "%.2f", (massGain! * 32 * 0.333 / 9)) + " гр"
-            carbohydrateRateLbl.text = String(format: "%.2f", (massGain! * 32 * 0.4 / 4)) + " гр"
-            totalCaloriesLbl.text = String(format: "%.2f", (massGain! * 32))
+        if weightLoss != nil && !weightLossTFOutlet.isHidden {
+            calculationsWeightLoss(weight: weightLoss)
+        } else if weightMaintenance != nil && !weightMaintenanceTFOutlet.isHidden {
+            calculationsWeightMaintenance(weight: weightMaintenance)
+        } else if massGain != nil && !massGainTFOutlet.isHidden {
+            calculationsMassGain(weight: massGain)
         }
+    }
+    
+    private func calculationsWeightLoss(weight: Double?) {
+        proteinRateLbl.text = String(format: "%.2f", (weight! * 25 * 0.333 / 4)) + " гр"
+        fatRateLbl.text = String(format: "%.2f", (weight! * 25 * 0.333 / 9)) + " гр"
+        carbohydrateRateLbl.text = String(format: "%.2f", (weight! * 25 * 0.4 / 4)) + " гр"
+        totalCaloriesLbl.text = String(format: "%.2f", (weight! * 25))
+    }
+    
+    private func calculationsWeightMaintenance(weight: Double?) {
+        proteinRateLbl.text = String(format: "%.2f", (weight! * 28 * 0.333 / 4)) + " гр"
+        fatRateLbl.text = String(format: "%.2f", (weight! * 28 * 0.333 / 9)) + " гр"
+        carbohydrateRateLbl.text = String(format: "%.2f", (weight! * 28 * 0.4 / 4)) + " гр"
+        totalCaloriesLbl.text = String(format: "%.2f", (weight! * 28))
+    }
+    
+    private func calculationsMassGain(weight: Double?) {
+        proteinRateLbl.text = String(format: "%.2f", (weight! * 32 * 0.333 / 4)) + " гр"
+        fatRateLbl.text = String(format: "%.2f", (weight! * 32 * 0.333 / 9)) + " гр"
+        carbohydrateRateLbl.text = String(format: "%.2f", (weight! * 32 * 0.4 / 4)) + " гр"
+        totalCaloriesLbl.text = String(format: "%.2f", (weight! * 32))
     }
     
     private func isHiddenUpdate(textField: UITextField) {
         if textField.isHidden == true {
             textField.isHidden = false
             textField.text = ""
+            proteinRateLbl.text = "0"
+            fatRateLbl.text = "0"
+            carbohydrateRateLbl.text = "0"
+            totalCaloriesLbl.text = "0"
         } else {
             textField.isHidden = true
             textField.text = ""
+            proteinRateLbl.text = "0"
+            fatRateLbl.text = "0"
+            carbohydrateRateLbl.text = "0"
+            totalCaloriesLbl.text = "0"
         }
     }
     
@@ -83,7 +115,7 @@ final class CalculatorVC: UIViewController {
     @objc func kbDidShow(notification: Notification) {
         self.view.frame.origin.y = 0
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-            self.view.frame.origin.y -= (keyboardSize.height / 2)
+            self.view.frame.origin.y -= (keyboardSize.height / 5)
         }
     }
         

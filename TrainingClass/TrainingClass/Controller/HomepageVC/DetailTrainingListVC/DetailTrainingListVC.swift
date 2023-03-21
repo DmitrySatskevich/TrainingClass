@@ -7,8 +7,10 @@
 
 import UIKit
 
-
 final class DetailTrainingListVC: UIViewController {
+    
+    @IBOutlet weak var numberTrainingLbl: UILabel!
+    @IBOutlet weak var trainingDescriptionLbl: UILabel!
     
     @IBOutlet weak var imageViewOne: UIImageView!
     @IBOutlet weak var imageViewTwo: UIImageView!
@@ -19,26 +21,33 @@ final class DetailTrainingListVC: UIViewController {
     
     @IBOutlet var activityIndicators: [UIActivityIndicatorView]!
     
-    var trainId: TrainingNumberURL?
+    var numberTraining: String?
+    var trainingDescription: String?
+    var arrayUrl: [URL] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         imageViewCornerRadius()
-        
+        numberTrainingLbl.text = numberTraining
+        trainingDescriptionLbl.text = trainingDescription
+        addUrlToImageView(insertArrayUrlGif: arrayUrl)
+    }
+    
+    private func addUrlToImageView(insertArrayUrlGif: [URL]) -> () {
         Task {
             do {
-                imageViewOne.image = try await UIImage.gifImageWithURL(url: trainId!.urlGif)
+                imageViewOne.image = try await UIImage.gifImageWithURL(url: insertArrayUrlGif[0])
                 activityIndicators[0].stopAnimating()
-                imageViewTwo.image = try await UIImage.gifImageWithURL(url: trainId!.urlGif2)
+                imageViewTwo.image = try await UIImage.gifImageWithURL(url: insertArrayUrlGif[1])
                 activityIndicators[1].stopAnimating()
-                imageViewThree.image = try await UIImage.gifImageWithURL(url: trainId!.urlGif3)
+                imageViewThree.image = try await UIImage.gifImageWithURL(url: insertArrayUrlGif[2])
                 activityIndicators[2].stopAnimating()
-                imageViewFour.image = try await UIImage.gifImageWithURL(url: trainId!.urlGif4)
+                imageViewFour.image = try await UIImage.gifImageWithURL(url: insertArrayUrlGif[3])
                 activityIndicators[3].stopAnimating()
-                imageViewFive.image = try await UIImage.gifImageWithURL(url: trainId!.urlGif5)
+                imageViewFive.image = try await UIImage.gifImageWithURL(url: insertArrayUrlGif[4])
                 activityIndicators[4].stopAnimating()
-                imageViewSix.image = try await UIImage.gifImageWithURL(url: trainId!.urlGif6)
+                imageViewSix.image = try await UIImage.gifImageWithURL(url: insertArrayUrlGif[5])
                 activityIndicators[5].stopAnimating()
             } catch {
                 print("Ошибка получения данных!")
