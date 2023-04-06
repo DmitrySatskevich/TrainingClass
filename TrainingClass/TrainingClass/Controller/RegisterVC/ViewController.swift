@@ -21,24 +21,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        emailTF.delegate = self
-        passwordTF.delegate = self
         ref = Database.database().reference(withPath: "users")
         notificationCenter()
-        
-        // если пользователь уже есть, производим переход в личный кабинет
-        authStateDidChangeListenerHandle = Auth.auth().addStateDidChangeListener { [weak self] _, user in
-            guard let _ = user else {
-                return
-            }
-            
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let mainTabBarController = storyboard.instantiateViewController(identifier: "MainTabBarController")
-            
-            (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?
-                .changeRootViewController(mainTabBarController)
-        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -152,7 +136,7 @@ extension ViewController {
     // Скрытие клавиатуры по тапу за пределами Text Field
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
-        view.endEditing(true) // Скрывает клавиатуру, вызванную для любого объекта
+        view.endEditing(true)
     }
 }
 
