@@ -7,30 +7,63 @@
 
 import Foundation
 
-let arrayURLOne = [urlGif, urlGif2, urlGif3, urlGif4, urlGif5, urlGif6]
-let arrayURLTwo = [urlGif7, urlGif8, urlGif9, urlGif10, urlGif11, urlGif12]
-let arrayURLThree: [URL] = [urlGif]
-let arrayURLFour: [URL] = []
-let arrayURLFive: [URL] = []
-let arrayURLSix: [URL] = []
-let arrayURLSeven: [URL] = []
-let arrayURLEight: [URL] = []
-let arrayURLNine: [URL] = []
-let arrayURLTen: [URL] = []
-let arrayURLEleven: [URL] = []
-let arrayURLTwelve: [URL] = []
-let arrayURLThirteen: [URL] = []
+let arrayURLOne: [URL] = [urlGifT1E1T10E2T13E1, urlGifT1E2T4E3, urlGifT1E3T4E4T7E3, urlGifT1E4T3E5T6E5T11E4, urlGifT1E5T13E6, urlGifT1E6]
+let arrayURLTwo: [URL] = [urlGifT2E1T11E2, urlGifT2E2T8E1, urlGifT2E3T8E3T12E5, urlGifT2E4, urlGifT2E5, urlGifT2E6T3E1T6E1T9E1T12E1]
+let arrayURLThree: [URL] = [urlGifT2E6T3E1T6E1T9E1T12E1, urlGifT3E2T9E2, urlGifT3E3T8E5, urlGifT3E4T11E3, urlGifT1E4T3E5T6E5T11E4, urlGifT3E6]
+let arrayURLFour: [URL] = [urlGifT4E1, urlGifT4E2, urlGifT1E2T4E3, urlGifT1E3T4E4T7E3, urlGifT4E5, urlGifT4E6]
+let arrayURLFive: [URL] = [urlGifT5E1T11E1, urlGifT5E2T8E2, urlGifT5E3T7E5T10E5, urlGifT5E4T11E6, urlGifT5E5, urlGifT5E6T8E6]
+let arrayURLSix: [URL] = [urlGifT2E6T3E1T6E1T9E1T12E1, urlGifT6E2, urlGifT6E3, urlGifT6E4T9E4T12E4, urlGifT1E4T3E5T6E5T11E4, urlGifT6E6T12E6]
+let arrayURLSeven: [URL] = [urlGifT7E1, urlGifT7E2T13E2, urlGifT1E3T4E4T7E3, urlGifT7E4, urlGifT5E3T7E5T10E5, urlGifT7E6]
+let arrayURLEight: [URL] = [urlGifT2E2T8E1, urlGifT5E2T8E2, urlGifT2E3T8E3T12E5, urlGifT8E4, urlGifT3E3T8E5, urlGifT5E6T8E6]
+let arrayURLNine: [URL] = [urlGifT2E6T3E1T6E1T9E1T12E1, urlGifT3E2T9E2, urlGifT9E3, urlGifT6E4T9E4T12E4, urlGifT9E5, urlGifT9E6T10E4T13E4]
+let arrayURLTen: [URL] = [urlGifT1E1T10E2T13E1, urlGifT10E3, urlGifT9E6T10E4T13E4, urlGifT5E3T7E5T10E5, urlGifT10E6]
+let arrayURLEleven: [URL] = [urlGifT5E1T11E1, urlGifT2E1T11E2, urlGifT3E4T11E3, urlGifT1E4T3E5T6E5T11E4, urlGifT11E5, urlGifT5E4T11E6]
+let arrayURLTwelve: [URL] = [urlGifT2E6T3E1T6E1T9E1T12E1, urlGifT12E2, urlGifT12E3, urlGifT6E4T9E4T12E4, urlGifT2E3T8E3T12E5, urlGifT6E6T12E6]
+let arrayURLThirteen: [URL] = [urlGifT1E1T10E2T13E1, urlGifT7E2T13E2, urlGifT13E3, urlGifT9E6T10E4T13E4, urlGifT13E5, urlGifT1E5T13E6]
 
-let urlGif = URL(string: "https://otkritkis.com/wp-content/uploads/2022/07/mw7at.gif")!
-let urlGif2 = URL(string: "https://i.gifer.com/embedded/download/OC9y.gif")!
-let urlGif3 = URL(string: "https://thumbs.gfycat.com/DeadlyTornInexpectatumpleco-size_restricted.gif")!
-let urlGif4 = URL(string: "https://i.gifer.com/EtPo.gif")!
-let urlGif5 = URL(string: "https://i.gifer.com/4seJ.gif")!
-let urlGif6 = URL(string: "https://www.despiertaymira.com/wp-content/uploads/2018/06/etienne_jacob-necesary-disorder.gif")!
-
-let urlGif7 = URL(string: "https://i.gifer.com/NZFC.gif")!
-let urlGif8 = URL(string: "https://i.gifer.com/embedded/download/4YGU.gif")!
-let urlGif9 = URL(string: "https://i.pinimg.com/originals/00/00/09/0000098849e0fc21177525d5c12ac830.gif")!
-let urlGif10 = URL(string: "https://otkritkis.com/wp-content/uploads/2022/07/gwvdu.gif")!
-let urlGif11 = URL(string: "https://otkritkis.com/wp-content/uploads/2022/07/guygx.gif")!
-let urlGif12 = URL(string: "https://i.gifer.com/R5ur.gif")!
+let urlGifT10E1 = URL(string: "https://psv4.userapi.com/c235031/u133118285/docs/d4/2fa8e36b9849/10-1_Zhim_v_blochnom_trenazhere.gif?extra=Ej1526ACxyiXNo5UwQAjUmoR5cGHstxZkjBa8GB5mVOz_K7cwB8o1Cwho7gXzaNSqqPYqzdG12qsJjemVzGlzTiSOFgay2GrvQCEp_aG7JzrDFoH4qC1z9sXBrZ2tz_tQTAMBD4eU2JVrP-30-PugDQY")!
+let urlGifT1E6 = URL(string: "https://psv4.userapi.com/c237231/u133118285/docs/d2/40a9fbf2432d/1-6_Skruchivania_na_press.gif?extra=R6qOZpaO-UbUjO_lSd7N-b1v_u5SGUY7ql_4sxexhrxeWmkoPJ0C-EuOZYNgkw87C0xnyUqAzVQHRhPevi9OZY4AKmIXcibsUXqizF4iHzU3TI3iDfBzJhqzhUAEw706-GUzyWKYfZz348jkJ4A80C-y")!
+let urlGifT2E4 = URL(string: "https://psv4.userapi.com/c237231/u133118285/docs/d13/ef382dea0fd9/2-4_Podyem_shtangi_na_bitseps.gif?extra=lrgeTT53Iy4ci7eHRs8KI6FQvBfTm2R0OY2yi-zgwVsDitHeygomGTCF8TRT4xEYdmv4NdWbSs6grHhIk48Usj1Y8RJqRZGVmuyH_06woNpHh00f-SqYX-M37xU4PBK0BfJ-9NNC0ySwGNvz2su22OjP")!
+let urlGifT2E5 = URL(string: "https://psv4.userapi.com/c237131/u133118285/docs/d25/b1741898fb95/2-5_Giperextenzia.gif?extra=KVHZhE-Pu6U-IzBb1o0JETusA42i9WF5ohTyMCprDqdAI4jYrKotQkTUmU8Aboj9MaQR2JUmc6LGZsMxk5chqz8U6IRO_01031F2F34e253V7TabGjnfVII33hDPk6pK_kdObqOWPMbBbcIH_WvJ6--w")!
+let urlGifT3E6 = URL(string: "https://psv4.userapi.com/c235031/u133118285/docs/d23/f5e1e09115f6/3-6_Podyem_nog_na_brusyakh.gif?extra=P8xHnNG8vVyN96nid6Um6y5nzO8eVHwE2_8R9EjXQ0lZD1eZOPZCLTdLKBc5JzZEzlmhpKSLIDTBUZIQUCFQ5J6F7SF9gMPS7Exp0lAjfBRCIFgFkNoN-sDXrQ1D9mm-7X76ZOfocss4nKZQ-LVay7U_")!
+let urlGifT4E1 = URL(string: "https://psv4.userapi.com/c235031/u133118285/docs/d24/7a9f2759a882/4-1_Zhim_ganteley.gif?extra=xtDdO2hZcE7xsmEFI4vPnJwS56IqHwZFq4yqhYqy4ImGwTCDsEqrr8kVzIvwO0cgN8K_OdjrCsseR86quuRxdqrWavSYKX8dLROpugm0kWVqGq6ktdQ3tS4eMmfDo-UqLFpA1ih11pSp5-piGHGXA2uh")!
+let urlGifT4E2 = URL(string: "https://psv4.userapi.com/c237031/u133118285/docs/d56/b8c50fdfe6ad/4-2_Zhim_shtangi_na_naklonnoy_skamye.gif?extra=wnYTUM59a5XoHt3JO4wjUdITCPjXLK6hFGVaBwiZZAZOy2uiEiew06RMJ8PSb_Sx0_BdUiBKdO09kWRGY-4WTLiOhC2xKba9n_E65QN-x1YKija_qNm4-E_G42H_yeOlAESU3qCZrzBTmffeCoqPf7CA")!
+let urlGifT1E2T4E3 = URL(string: "https://psv4.userapi.com/c240331/u133118285/docs/d25/2ec8d9601076/1-2_4-3_Svedenie_na_grud_v_naklone_v_bloke.gif?extra=WBfG5LALcVZ6HpyW3E4Sd6XDQLI3VdTbJ563OGA7WAbxOOFtPxkMho4RxIlE1lCx5tUZa4f7euya_aJ8JaPLBowhRs59rXOFbQOVa3Km_RNGXxdE7fftQpyd-1xo4Gc3s0dFo9qIMK9pr1a6q225gZbd")!
+let urlGifT4E5 = URL(string: "https://psv4.userapi.com/c237131/u133118285/docs/d55/fbb81f9457d5/4-5_Razgibania_ruk_s_verkhnego_bloka_zhestkaya_rukoyadka.gif?extra=JjZI1L2uKh9pz6mK1lbIBkuFUZmCBt5iv5imof0tbj1X-gbca_HHjUmRFPE8ikw2MJPpoc36NXBR0jTtnpEnovmaWxjlLsoeOAGqc2bvQy9dATivHVjZdZF_ut-5utdg4eQx5XyRL9Lcr0GZBE9TnaZN")!
+let urlGifT4E6 = URL(string: "https://psv4.userapi.com/c240331/u133118285/docs/d22/4ce6d967ec9d/4-6_Zhim_ganteli_za_golovoy.gif?extra=EQ3Aws7W1rWGSdB_BtTkxps9QnHgWDT_YH43rKSfycrM1Wc-uOrmjPygaZhjeoJS2KjdyGLwH5ZlY8LikZJD1i8iLcHNrtQ_nZsq810PqIXQhprDq0tvAlTN5WNiipVII4vBZOgvJM0IUAmATMKmSTHz")!
+let urlGifT5E5 = URL(string: "https://psv4.userapi.com/c235131/u133118285/docs/d59/385bced8a33e/5-5_Razvedenia_na_zadnyuyu_deltu_v_bloke.gif?extra=99YofZlgpS1Biqvcou_VMG5f4hqr2S0Ih2x74NuGjMPFilPWolVZOEyyuWRtDj8Pnuvgm6M2t64559ox57bYar96R442bAFhAM_pwnxTD3o15OWFISpnSDPPrB_0ZmuelWltmiuU6A3LmXIZfHtYUNrU")!
+let urlGifT6E2 = URL(string: "https://psv4.userapi.com/c237231/u133118285/docs/d49/243c1efc0a46/6-2_Prisedania_v_smite_nogi_na_shirine_plech.gif?extra=QOGQL-3G94IWJVe5YlUpsqo7eV0r7Viqt8fU9rwx7j4tWkuMCQHeK3eab-SIHTiyqftEobJqRpjlEKK8k0o1EOpC8Ku4vDwBMwwioh_xO-MpqgyOOXNi7jTNjl-QztPrgtZvXPzowzaRNeUH1eHFkQry")!
+let urlGifT6E3 = URL(string: "https://psv4.userapi.com/c240331/u133118285/docs/d50/30e1d407b744/6-3_Zhim_platformy.gif?extra=_7_MXszjUf7IOzu7JsTQ3526SYCv3jUsy1iDpqJ8j_YkUbXXFVgIXk02-YvDxOjQM4znQa96opuvpmm73syk3Xb9ulxV57mfP7ln7XLgvAk1ISY6TR6diRCsHeGWRKhsfP-_DNIjxAYO8CMAVAhSfm07")!
+let urlGifT7E1 = URL(string: "https://psv4.userapi.com/c235131/u133118285/docs/d17/ba6a0f4b2768/7-1_Svedenia_pered_soboy_v_blokakh.gif?extra=3PXR1bxi78bOLoJA20_czuTCI4uA9stYD2apJptFEHyqvyS5Ml7-Z26j6EWffUwuN2sHcvJEPZ4UjbKKh_8QwXBGCYkU1HE2jncIKxtEQMez2R-4OqgFJ1lWOsWoU9UMCt5iVyJ4XAvUViql_aTict9K")!
+let urlGifT1E3T4E4T7E3 = URL(string: "https://psv4.userapi.com/c237331/u133118285/docs/d15/f5f1e54691e6/1-3_4-4_7-3_Tyaga_shtangi_k_podborotku.gif?extra=qt5d3bqfreelW9CyCsutadPNOGNWRQAfmlxpmRIupp5vtvSg1b3Cdb__jW2UcgxIBcXhoD6vIDc2OnoquNMWyHZ5vLo98zs4G-jqYMB6ceUS2SvR7Ju6os8QGei7MRqY0vYZYLR2hyfayVb5H4092Qev")!
+let urlGifT7E4 = URL(string: "https://psv4.userapi.com/c236331/u133118285/docs/d13/45bfd1021f20/7-4_Poocheredno_podm_ganteley.gif?extra=7MQ4QlKWsDxnRmevPZyjzIPiGIT8DF-oMf8brVqjejxiOA-bp6pBhMYLlAN0PAQLrSan0IGxns4dCe9-KbZQ6-jIqm5DPfJzVU3gxXWQDHyF3CGNiMPldAM-w0zNLPq52zmc3DgRPWj0QU5ptmNRXICc")!
+let urlGifT7E6 = URL(string: "https://psv4.userapi.com/c235031/u133118285/docs/d26/b740a83900dc/7-6_Frantsuzskiy_zhim_shtangi.gif?extra=jF9QX4B6FLftAdu1y_OXCqyeus0ajt4Ehm5uAkYQfsxFY9WnY64aM3l_UmXDNXLIBRBObiY6YQkUTX7lt3xvcQQc-gCIPn_EgzOj3cnFpEi1KQmTlyaJS0NSKNLlnDuFApm1z3Xeps2DuarKtz3AwLYD")!
+let urlGifT2E2T8E1 = URL(string: "https://psv4.userapi.com/c237031/u133118285/docs/d18/556dc334005b/2-2_8-1_Gorizontalnaya_tyaga_v_bloke.gif?extra=FXeHOUY7nX4YExcmRPfKtvHhvBI262-P4hIWIgRBxOgCBCe2D_uYFQM0WUCdwep-Ao2XNP7Fmv8rJMpZ0S6K7VhPUKMuroXClbBXD3uqie-CH97uK6UTXRt04oYFpTzL7igSgCSxoGEXU8XdZdnez3ga")!
+let urlGifT5E2T8E2 = URL(string: "https://psv4.userapi.com/c235131/u133118285/docs/d6/b20fc335fa2d/5-2_8-2_Tyaga_ganteley_na_skamye.gif?extra=xgPtWhSVanYrHji_726u5fZljOUNDuOXH5macJhlbOJLqJMGYFcntrXDNGlMP7zHoGT0dF1W12awYLxHCP6j2TwR-fBmik6usAdQqX1tQ9i26WhjvWdh8NNHbwFjCDPL9iIHnfMr71iw7N1lo77c3Ndu")!
+let urlGifT8E4 = URL(string: "https://psv4.userapi.com/c235131/u133118285/docs/d48/295385552398/8-4Tyaga_ganteley.gif?extra=Tqrjk7i0L33pr10q8S-jcL9I92QZLhBdFPmynXgTy_jafjA4uQvRY0wSrKVdEKblE6Je70Dj8KXc0p7zMm6k0vTRndjTUrIvxbFlNyvIitMdZ2m-K5KS0LChMGkC2wfxtQ1UdzJbC6cxJz6z_-h2Fd52")!
+let urlGifT3E3T8E5 = URL(string: "https://psv4.userapi.com/c237231/u133118285/docs/d7/9a7a6764cd3b/3-3_8-5_Sgibania_v_trenazhere.gif?extra=18RYAX-kNazaabNRhPE5ql7c7pf1h_9Y7TVLFUsfQiAsWwnWrzmZdb7Eiudx4Q-cyAxO3dHETsU8iVeMH1tv08zn4Yp7SyyHlv45wXJ322VwYMaGTxSMDF38GlwnBOwxS6PzmWjIAiQ1lLRb2DoSmkFR")!
+let urlGifT5E6T8E6 = URL(string: "https://psv4.userapi.com/c237131/u133118285/docs/d59/6fc21c151a6b/5-6_8-6_Skruchivania_na_pres.gif?extra=HqcWjCLgn74JifaY3loavft5AjBg8S9PosfoWIMiz4mmEN5smgwEB9T6LqPZyc0gfZ2aR6q4Sg897AVWXHoVfrDRil7ExUk4GntX4vpGn8ImvBBQ5qbBXHWGixu_MXWzVxMe0yg2yP3h4gmqjJ_uvNP5")!
+let urlGifT3E2T9E2 = URL(string: "https://psv4.userapi.com/c235031/u133118285/docs/d58/ca2b0c533208/3-2_9-2_Zhim_platformy_uzkaya_postanovka_nog.gif?extra=a88FZTEy2NQi6iHnc_kyGbnzSOGnpeb8VDhpKxw7e1b1yn3p_-NBaeDtwnzM__aRpGOFOwOJOYrIDL2O7Nj6uiZDC2HgCbbGNcZHxkiNa0bUO2eYPVUTyApxyNrXCjV7kgeEAv-R5-6_hqP_vmSKIA1J")!
+let urlGifT9E3 = URL(string: "https://psv4.userapi.com/c240331/u133118285/docs/d48/fdb8eac883b5/9-3_Vypady_vpered.gif?extra=a_19GunEQ4qSXgwC8sS79z2MTmcgXt5KTqwcv8UYCn8ynzwz_uNHpjMssCqqizAcTIfbMLjW0eI43xCnbOTVZBe_YouTpAcvyTeLnY7inahKmr707AdpPxMywKHgYIiSpxJPSdogZRV4KBOtBxR5C3cA")!
+let urlGifT9E5 = URL(string: "https://psv4.userapi.com/c237031/u133118285/docs/d20/dffb39f9ac44/9-5_Otzhimania_ot_pola.gif?extra=d7LLVdxkuz2HV692yKVaShL5-N3FInkm4ci9UVEU6bJAAby21T4yXsUmS3OXdyvxH0zeTu4rmCTEquT5sa-37UXWGycWrb4EkCe7O1KH4ulXIXPmalRc-hYb_fLYhgt6qGm-0TACv6eTH44utX-PWbfr")!
+let urlGifT10E3 = URL(string: "https://psv4.userapi.com/c237031/u133118285/docs/d51/a69233b18b6b/10-3_Razvedenie_ganteley_na_naklonnoy_skamye.gif?extra=jzjxGVh83hv_RwSuFlqFsv6Z2G-Mt358G24j5rDaL3rOnogk4GdJRzoM7Qr00zfzP7C35mbldON-LlfigEBCY1TkEJCe1tJc-Q2MD3riDkzuGAke8P55kHOudJegP6NrswmlRPgvoyQH9SzE4y67MuqT")!
+let urlGifT5E3T7E5T10E5 = URL(string: "https://psv4.userapi.com/c235031/u133118285/docs/d35/9f934a6454e6/5-3_7-5_10-5_Molotki_na_bitseps_stoya.gif?extra=TZazwGgpVrLWC4NJqxonqYPakamGRKqecI66Ypr5mvO9ArjNGr4T0azsU1tx_J9TRFeoe7U8vJmYgkf0fiNDPcuyHL-ynw7NjMMO3M0X5ro8kQ9BzassUpiLLZHVxtar2OUYvY5nhSDw7mV4qW913gTY")!
+let urlGifT10E6 = URL(string: "https://psv4.userapi.com/c240331/u133118285/docs/d32/a34e8fe1f92f/10-6_Zhim_arnolda.gif?extra=iDIdvEOR-XH_JLNtRrmKfWRkzDqMpS8vZYDfxPjh0EraUVUworMVtk5uj8cwS4wXfiqnLAbFVxE-koAcq5Ax2ovsuH7gC07rcg5CDUw0FC90BljwfE6Z7qAx7gBmBe5d1IwYw2IoBLfzIme86U3WHvsG")!
+let urlGifT5E1T11E1 = URL(string: "https://psv4.userapi.com/c236331/u133118285/docs/d14/06441ad94fa2/5-1_11-1_Podtyagivania_v_gravitrone.gif?extra=MnfM9VsGUYx_49e_UxyaWran8YAufuZqSZk9jucArs65GaIlFFDorKeXgCOJgBZ9lWRHOmkuQwkkFZCZLvYIbbEb0JyJuDDBBKGe_3agS3AfNbKNeaDtOmEM_bIyYfYdFYlBztVLDaFipJzwRgoyOpwL")!
+let urlGifT2E1T11E2 = URL(string: "https://psv4.userapi.com/c235131/u133118285/docs/d3/d72e601370e2/2-1_11-2_Tyaga_verkhnego_bloka.gif?extra=WfPJTbBCmS7vbn6TGi_KhoP1-Qu_0QWjUdTg2TLitHwSdv8zh-SR8MMrbsYBTBr1EAM9Yg13vRLXBuPqOIIg7qUlki28MZCiMD1NDIIbdS5GCPshZ_9YDK-UyDjLsgM69ACCimPri7W2ScS9obKplDQE")!
+let urlGifT3E4T11E3 = URL(string: "https://psv4.userapi.com/c236331/u133118285/docs/d52/a72cdc5803cc/3-4_11-3_Zhim_ganteley_sidya.gif?extra=GFwFgLurrGvWSWznNHct5mnIGRD0RkpzDq9qHWrtMXnRWKcGB5piw7oc4nxZNXaVy5_HrLQHCerR3HBBm4qN8SMWBGkqOruZ4U8CYuZaTvHXDG3m-_l8p4HYmdhIJM7X0TtUpBubQga11XxOD3aRlgZ_")!
+let urlGifT1E4T3E5T6E5T11E4 = URL(string: "https://psv4.userapi.com/c237131/u133118285/docs/d50/396d6607c503/1-4_3-5_6-5_11-4_Makhi_ganteley.gif?extra=GyC7brNBtNSDhgAXgBu3bG1Y5rOkEVJuIW44lP_HpGclDcGNgDxZAv5j4u76pjz5yVtepSMhGHD8YJpPNvGLQ5Rejk6AV1y8QVc0cKccBI_zOk1mJvuhjgPorfCykEkybU7jGekd_R4QSS199TSlnRa-")!
+let urlGifT11E5 = URL(string: "https://psv4.userapi.com/c235131/u133118285/docs/d43/0375d8fcfd47/11-5_Podyem_na_bitseps_trenazher_skotta.gif?extra=d9HOwnAm0eeVPIDgDxJMoUhra8QDu5-E339SHTC-DhCXZFKsGklxsbNDabewmXtpFgwVwpbTnECq0XD1WhOecU8_Qa-Zs2jGarSkS0K521IZsWjUvHxN2oOZI-x8zx9IvSrlXy5GBWfzCSHByIrTamcE")!
+let urlGifT5E4T11E6 = URL(string: "https://psv4.userapi.com/c240331/u133118285/docs/d33/0b3d64640acd/5-4_11-6_Podyem_ganteley_na_bitseps.gif?extra=1fTv35hbzbG5Ak4tlipwkAumZRbD0vdG45OdvjawHGDUabYJdqFrzKqFvoQXGeAMGhvYZDlbi6luJNaXdQl-dFGdtTptOYEWf9FxtHpOxQWDm5vBS4XAWLH3tNKDtyRREp-N0AGGJOgofQUafnbaVuzY")!
+let urlGifT2E6T3E1T6E1T9E1T12E1 = URL(string: "https://psv4.userapi.com/c237231/u133118285/docs/d23/e913535b151e/2-6_3-1_6-1_9-1_12-1_Razgibania_nog_v_bloke.gif?extra=WP_PGkFtMOyeGo-hYEgmZu5yRYo-kyY6AJ5d6eHyIaF-uPaug0AYoaRF5xD9xr4fMDYP0_TAuqhRwIj9wCa-KMMdXuXC_YWkvkErwl6arvlh69aShKFyhPpSMJJ-pviG0QpuYuqk3zc-TprH08zR7p_S")!
+let urlGifT12E2 = URL(string: "https://psv4.userapi.com/c237331/u133118285/docs/d8/32741fc43a80/12-2_Vypady_nazad.gif?extra=qHvUYorbIniZbi2ujUt-8ZMBTPN-7RMeoTAfryEUIMYn98ir6_4WZinjD42hI5cbVZ9h5zFL-e3Fnq_9TlobYE-Ccz1Rdw0gKekotpk32gc-udXXYO1tI8S5QsEOzy7hsLGZYBGMUbio_3Z8rBvw_F0u")!
+let urlGifT12E3 = URL(string: "https://psv4.userapi.com/c235031/u133118285/docs/d27/f8c79ad80df8/12-3_Zashagivania_na_tumbu.gif?extra=Nma2ziJB10vDcnSvFADRfle2KNVyU2sVJDorfkLL9yEenqyWSeL6YjBKxwUUE8zGhQXl8oRWv1C7-oKem8xw-k6fIMh5YNw_zd3lLeUQj8t_FmS-lOR5LpOPsP_qpTiHwuihW1eGDo_ApT9Wwma_onmr")!
+let urlGifT6E4T9E4T12E4 = URL(string: "https://psv4.userapi.com/c240331/u133118285/docs/d53/ef42503697e2/6-4_9-4_12-4_Zhim_sidya_v_blochnom_trenazhere.gif?extra=3BU1f24vuDLTEtSls8jRiTSGGrpBLp20BUXsqStIJVVqr7hq5JdRQRHLdb9iXZOd1bJudnIXm0bCJrNDdMIKds-n9IKFT39ZITzD-_HUrM8nnuPH4BBpdqRZIvsUBKef902utvXJuUedz_QXWsyngSFs")!
+let urlGifT2E3T8E3T12E5 = URL(string: "https://psv4.userapi.com/c237231/u133118285/docs/d16/23b53910b260/2-3_8-3_12-5_Makhi_ganteley_sidya_v_naklone.gif?extra=5bG9txVxgOBmh0QAWlwugFVeGD6EDExq56rrzf6s2F1gbthCtEKu3oQE4pu1U41jP6LGGonX7vVmUU3azKH0VOzNNOhocw_KDPSTXb1CeUflGKr05QHSPti8fVZdGup6zMhEuDC5Ox9RbKCRLB1KTGFj")!
+let urlGifT6E6T12E6 = URL(string: "https://psv4.userapi.com/c236331/u133118285/docs/d44/08a649e102b1/6-6_12-6_Skruchivania_na_skamye.gif?extra=uPUUa95jEIPGgGB29QN-wE36r56EdQrNWcjZrReD0TCDRTrYAL60dbXYv8T_QqcK2rC_MBnkWB-wz7gl76Kc11InMcPil-49Dfh3Xd3Etn_VIHDa9a_rq4ZunZF7OrRzQk4tKa6mTLmJmkivxBpRPfXn")!
+let urlGifT1E1T10E2T13E1 = URL(string: "https://psv4.userapi.com/c235031/u133118285/docs/d28/efeb9d34d04c/1-1_10-2_13-1_Zhim_ganteley_na_naklonnoy_skamye.gif?extra=PZwY7YZKuWtrKnXoUtYP8zItTD1xj0kFmxk1XhIIMUJcndv4mpFvWIcOjRRKh9JJS2JV6s7Pb_PA2DzmwENwStJ9q5NQM0HfZqRhvQ2WG1bOmk_dV_0XkKDzDCK4FMLtPWdMnRNiiIXKPrpd7dDOSpt0")!
+let urlGifT7E2T13E2 = URL(string: "https://psv4.userapi.com/c235031/u133118285/docs/d27/391d8525bf12/7-2_13-2_Zhim_v_smite_na_naklonnoy_skamye.gif?extra=_vFI0zdSiNNgSOSXxvFG1cs3r1U0jLWDGvhjWrNWDzPT_ibifryavl94dsNM-An94BtWneKjprRR4MP420FkR6PtSoKY2-3kf837uuI8whBK5uGpnIcIh6O5ZXxEOEcKem_kRJVRkmmMSxVIrtXFrAX2")!
+let urlGifT13E3 = URL(string: "https://psv4.userapi.com/c240331/u133118285/docs/d30/7a8916ca2f9b/13-3_Molotki_na_bitseps_sidya.gif?extra=4OgZiFDQUqOBBROmPf-RJUZcNm2iA1qQ7HyxoLobqAAej0iDVkP5Qd62CavlKQKZdi9zLo6yOWSmJ27a43jvyVjPSsytu9A_5VaKXWSscuICWbpNr2HJrc9FrEcTLQ_p5JPFFGej_pif-qNGsZdllNBe")!
+let urlGifT9E6T10E4T13E4 = URL(string: "https://psv4.userapi.com/c240331/u133118285/docs/d8/3984866cb263/13-4_Razgibania_ruk_iz-za_golovy_v_bloke.gif?extra=ARfaPWgn5FZiaIskzBjfTLHzVIt-JGEiHShHb9PYixLI0lMYIVuUW-3JKYAh978_sEqQ3_3TNgfeo8B-SHUpG8wlYlHYs-XhoA6bY-8dKNkQ0NUJtJBB3I4evY37hQwZ06t2sxX5gTqpI35GmVCKesc5")!
+let urlGifT13E5 = URL(string: "https://psv4.userapi.com/c237331/u133118285/docs/d35/6b7c2c437238/13-5_Podyem_na_bitseps_sidya.gif?extra=oFf96-fPHcc1nxLTcr5ieYNIqfkXiiOHsoaRhICgIMcygWcmARyxn6OAfOv9eRM9Q74WRR9Npp9foDCPgio0F2RVuT0hjMUpJX2E9KMYRJksO0Cavx92xibyAvjR8ohALAbXRoFPk-MWeQClA8bBoY0M")!
+let urlGifT1E5T13E6 = URL(string: "https://psv4.userapi.com/c240331/u133118285/docs/d53/21a05cc2a987/1-5_13-6_Razgibania_verkhnego_bloka.gif?extra=51ic9nidXTWvND1OKySnDWfQRFmlTYXaMZyG6UmZQDPpV6lvsHzhpXQcZqDeqglFKaMo11oDxvK0NKfp3QMH4rUH2fdKHzA-eN60KSkr8W-kbLa2bRv6M_HEqn1HOvOW3iDn3_-5wzNY4UZKoUe0jquf")!

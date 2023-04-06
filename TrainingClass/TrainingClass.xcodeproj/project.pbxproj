@@ -135,6 +135,8 @@
 			children = (
 				F5BFCCC529B22E4700FCFD65 /* RegisterVC */,
 				F5BFCCC629B22EAB00FCFD65 /* HomepageVC */,
+				F504310629B62767006679AC /* DetailTrainingListVC */,
+				F5BFCCC729B22EC500FCFD65 /* TrainingListVC */,
 				F500D3A829A65EA400840EAD /* CalculatorVC */,
 			);
 			path = Controller;
@@ -170,8 +172,6 @@
 			isa = PBXGroup;
 			children = (
 				F5EC83A5298FD45D00E9205A /* HomepageVC.swift */,
-				F5BFCCC729B22EC500FCFD65 /* TrainingListVC */,
-				F504310629B62767006679AC /* DetailTrainingListVC */,
 			);
 			path = HomepageVC;
 			sourceTree = "<group>";
