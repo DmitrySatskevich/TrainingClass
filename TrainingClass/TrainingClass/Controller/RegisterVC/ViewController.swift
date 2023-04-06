@@ -21,28 +21,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        emailTF.delegate = self
-        passwordTF.delegate = self
         ref = Database.database().reference(withPath: "users")
-        
-        // если пользователь уже есть, производим переход в личный кабинет
-        authStateDidChangeListenerHandle = Auth.auth().addStateDidChangeListener { [weak self] _, user in
-            guard let _ = user else {
-                return
-            }
-            
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            if let HomepageVC = storyboard.instantiateViewController(withIdentifier:
-                "HomepageVC") as? TrainingListVC {
-                self?.navigationController?.pushViewController(HomepageVC, animated: true)
-            }
-        }
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(kbDidShow), name:
-                                                UIWindow.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(kbDidHide), name:
-                                                UIWindow.keyboardWillHideNotification, object: nil)
+        notificationCenter()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -68,10 +48,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
             } else if let _ = user {
                 // если замыкание отрабатывает без ошибок, перейти на новый экран
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                if let HomepageVC = storyboard.instantiateViewController(withIdentifier:
-                    "HomepageVC") as? TrainingListVC {
-                    self?.navigationController?.pushViewController(HomepageVC, animated: true)
-                }
+                let mainTabBarController = storyboard.instantiateViewController(identifier: "MainTabBarController")
+                
+                (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?
+                    .changeRootViewController(mainTabBarController)
             }
         }
     }
@@ -101,7 +81,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
         
     @IBAction func forgotYourPasswordAction() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let mainTabBarController = storyboard.instantiateViewController(identifier: "MainTabBarController")
         
+        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?
+            .changeRootViewController(mainTabBarController)
     }
     
     // анимация появления Error
@@ -117,6 +101,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
                        }) { [weak self] _ in
             self?.errorLbl.alpha = 0
         }
+    }
+    
+    private func notificationCenter() {
+        NotificationCenter.default.addObserver(self, selector: #selector(kbDidShow), name:
+                                                UIWindow.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(kbDidHide), name:
+                                                UIWindow.keyboardWillHideNotification, object: nil)
     }
     
     //  Смещение экрана при появлении клавиатуры
@@ -145,7 +136,7 @@ extension ViewController {
     // Скрытие клавиатуры по тапу за пределами Text Field
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
-        view.endEditing(true) // Скрывает клавиатуру, вызванную для любого объекта
+        view.endEditing(true)
     }
 }
 
